@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b02be677-e680-4b89-b7ba-abfbecdc56e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/img/svg/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/svg/sprite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/svg/whatsapp.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/images/photo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/images/photo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/images/svg/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/images/svg/sprite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/images/svg/whatsapp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +53,8 @@
       <workItem from="1637097346834" duration="11623000" />
       <workItem from="1637112397906" duration="1324000" />
       <workItem from="1637136638305" duration="51000" />
-      <workItem from="1637159328227" duration="2191000" />
+      <workItem from="1637159328227" duration="2690000" />
+      <workItem from="1637163558167" duration="869000" />
     </task>
     <servers />
   </component>
