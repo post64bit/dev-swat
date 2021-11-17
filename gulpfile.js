@@ -21,19 +21,23 @@ function browsersync() {
 }
 
 function images() {
-    return src('app/img/**/*')
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.mozjpeg({quality: 75, progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
-    .pipe(dest('dist/img'))
+    return src([
+        'app/img/**/*',
+        '!app/img/sprite.svg',
+        '!app/img/svg'
+    ])
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 75, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
+        .pipe(dest('dist/img'))
 }
 
 function scripts() {
@@ -67,7 +71,9 @@ function build() {
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/js/script.min.js',
-        'app/*.html'
+        'app/*.html',
+        'app/img/sprite.svg',
+        'app/img/svg'
     ], {base: 'app'})
         .pipe(dest('dist'))
 }
