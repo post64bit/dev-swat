@@ -190,11 +190,10 @@ body.lock {
     }
 
     &__arrow {
-        margin-top: -105px;
-        margin-bottom: 40px;
-        margin-left: 45px;
+        top: 75px;
+        left: 45px;
         cursor: pointer;
-        position: relative;
+        position: absolute;
         width: 80px;
         height: 50px;
         transform: rotate(90deg);
@@ -218,7 +217,7 @@ body.lock {
         height: 4px;
         top: 7px;
         right: -7px;
-        background-color: black;
+        background-color: inherit;
         transform: rotate(-45deg);
         border-radius: 50px;
     }
@@ -230,7 +229,7 @@ body.lock {
         height: 4px;
         top: -7px;
         right: -7px;
-        background-color: black;
+        background-color: inherit;
         transform: rotate(45deg);
         border-radius: 50px;
     }
@@ -328,6 +327,7 @@ body.lock {
     width: 30px;
     height: 30px;
     transition: .3s;
+
     &:hover {
         -webkit-box-shadow: 0px 0px 0px 5px rgba(34, 60, 80, 0.2);
         -moz-box-shadow: 0px 0px 0px 5px rgba(34, 60, 80, 0.2);
@@ -560,6 +560,7 @@ body.lock {
             text-decoration: none;
             color: black;
         }
+
         &-instagram {
             text-decoration: none;
             color: black;
@@ -669,6 +670,7 @@ body.lock {
             position: absolute;
             left: 30px;
             transition: all 0.1s ease;
+            fill: #01A6BC;
         }
 
         &-various {
@@ -798,6 +800,7 @@ body.lock {
         width: 37px;
         height: 37px;
         transition: .3s;
+
         &:hover {
             -webkit-box-shadow: 0px 0px 0px 9px rgba(255, 255, 255, 0.4);
             -moz-box-shadow: 0px 0px 0px 9px rgba(255, 255, 255, 0.4);
@@ -903,6 +906,11 @@ body.lock {
     border-bottom: 6px solid white;
 }
 
+.ticker3 {
+    background-color: #FFD800;
+    border-top: none;
+}
+
 // ticker end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
@@ -910,9 +918,10 @@ body.lock {
 
 .services {
     &__wrapper {
-        width: 1248px;
+        width: 1118px;
         margin: auto;
     }
+
     &__vector {
         width: 240px;
         height: 240px;
@@ -920,6 +929,7 @@ body.lock {
         top: -70px;
         right: -30px;
     }
+
     &__vector-arrow {
         width: 240px;
         height: 240px;
@@ -927,6 +937,7 @@ body.lock {
         bottom: -100px;
         right: 220px;
     }
+
     &__blocks {
         display: grid;
         grid-template-columns: 10fr 0.8fr;
@@ -953,45 +964,54 @@ body.lock {
             z-index: -2;
         }
     }
+
     &__title {
         margin-top: 123px;
         margin-bottom: 132px;
     }
+
     &__h2 {
-        font-family: Abril Fatface,sans-serif;
+        font-family: Abril Fatface, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 64px;
         line-height: 125%;
         margin-bottom: 25px;
     }
+
     &__text {
-        font-family: Work Sans,sans-serif;
+        font-family: Work Sans, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 32px;
         line-height: 120%;
     }
+
     &__all-icon {
         width: 32px;
         height: 32px;
         margin-bottom: 16px;
     }
+
     &__icon1 {
         fill: #01A6BC;
     }
+
     &__icon2 {
         fill: #FA547C;
     }
+
     &__icon3 {
         fill: #FAA525;
     }
+
     &__icon4 {
         fill: black;
         width: 42px;
         margin-right: 38px;
         margin-top: -20px;
     }
+
     &__footer-content {
         display: flex;
         align-items: center;
@@ -1000,28 +1020,32 @@ body.lock {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     &__footer-text1 {
-        font-family: Roboto,sans-serif;
+        font-family: Roboto, sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 32px;
         line-height: 139%;
     }
+
     &__footer-text2 {
-        font-family: Andale Mono,sans-serif;
+        font-family: Andale Mono, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
         line-height: 120%;
     }
+
     &__column-name {
-        font-family: Work Sans,sans-serif;
+        font-family: Work Sans, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 48px;
         line-height: 120%;
         margin-bottom: 40px;
     }
+
     &__column-item {
         font-family: Roboto, sans-serif;
         font-style: normal;
@@ -1031,11 +1055,13 @@ body.lock {
         color: #858585;
         margin-bottom: 6px;
     }
+
     &__columns {
         display: flex;
         justify-content: space-between;
         margin-bottom: 85px;
     }
+
     &__decor {
         height: 214px;
         width: 6px;
@@ -1044,3 +1070,542 @@ body.lock {
 }
 
 // Services end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+// our work @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.ourwork {
+    background-color: black;
+
+    &__decor-line {
+        height: 6px;
+        width: 100%;
+        background-color: white;
+    }
+
+    &__wrapper {
+        width: 1248px;
+        margin: auto;
+        position: relative;
+    }
+
+    &__arrow-and-circle {
+        top: 120px;
+    }
+
+    &__circle-text {
+        fill: white;
+    }
+
+    &__arrow div {
+        background-color: white;
+    }
+
+    &__title-text {
+        color: white;
+        text-align: end;
+        padding-top: 145px;
+        margin-bottom: 173px;
+
+        &-h2 {
+            font-family: Abril Fatface, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 64px;
+            line-height: 125%;
+        }
+
+        &-p {
+            font-family: Work Sans, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 120%;
+        }
+    }
+
+    &__load-more {
+        font-family: Andale Mono, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 120%;
+        color: white;
+        text-align: center;
+        margin-top: 25px;
+        padding-bottom: 254px;
+    }
+
+    // item @@@@@@@@@@@
+    &__item {
+        margin-top: 12px;
+
+        &-img-wrapper {
+            width: 100%;
+            height: 617px;
+            overflow: hidden;
+            transition: .4s;
+
+            &.active {
+                height: 417px;
+            }
+        }
+
+        &-trigger {
+            margin-bottom: 72px;
+            position: relative;
+
+            &:hover .ourwork__item-circle {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &-a {
+            font-family: Andale Mono, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 120%;
+            color: white;
+            text-decoration: none;
+        }
+
+        &-svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        &-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+            align-items: center;
+        }
+
+        &-detailed-description {
+            margin-bottom: 69px;
+        }
+
+        &-description {
+            width: 712px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-item1 {
+                font-family: Roboto, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 144.5%;
+                color: white;
+            }
+
+            &-item-dot {
+                font-family: Roboto, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 144.5%;
+                color: #858585;
+            }
+
+            &-item2 {
+                font-family: Work Sans, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 120%;
+                color: white;
+            }
+
+            &-item3 {
+                font-family: Roboto, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 150%;
+                color: #858585;
+            }
+        }
+
+        &-detailed-description {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-content {
+            display: none;
+            &-title {
+                font-family: Work Sans, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 120%;
+                color: #C5C6C7;
+                margin-bottom: 69px;
+            }
+        }
+
+        &-summary {
+            &-blocks {
+                width: 341px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            &-title {
+                font-family: Roboto, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 150%;
+                color: white;
+                margin-bottom: 16px;
+            }
+
+            &-description-item {
+                font-family: Roboto, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 150%;
+                color: white;
+            }
+
+            &-info-item {
+                font-family: Roboto, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 150%;
+                color: white;
+            }
+        }
+
+        &-features {
+            &-title {
+                font-family: Roboto, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 150%;
+                color: #858585;
+                margin-bottom: 16px;
+            }
+
+            &-blocks {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 777px;
+            }
+
+            &-block-item {
+                font-family: Roboto, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 150%;
+                color: #858585;
+            }
+        }
+
+        &-rights {
+            font-family: Andale Mono, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 120%;
+            color: #858585;
+            margin-bottom: 69px;
+        }
+    }
+
+    // item end @@@@@@@@@@@@
+
+    // item circle @@@@@@@@@@@@
+    &__item-circle {
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        background-color: white;
+        border-radius: 100px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s opacity, .3s visibility;
+    }
+
+    &__view {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__icon {
+        width: 62px;
+        height: 52px;
+    }
+
+    // item circle end @@@@@@@@@@@@
+}
+
+// our work end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+// whyus @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.whyus {
+    display: grid;
+    grid-template-columns: 10fr 0.8fr;
+
+    &__wrapper {
+        width: 1118px;
+        margin: auto;
+    }
+
+    &__h2 {
+        font-family: Work Sans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 110px;
+        line-height: 120%;
+        margin-top: 144px;
+        margin-bottom: 144px;
+
+        &-span {
+            position: relative;
+            display: inline-block;
+        }
+
+        &-span::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            bottom: 4px;
+            right: 15px;
+            z-index: -1;
+            background-color: #71C23E;
+        }
+    }
+
+    &__block1 {
+        border: 6px solid black;
+        border-top: none;
+        position: relative;
+    }
+
+    &__block2 {
+        border: 6px solid black;
+        border-left: none;
+        border-top: none;
+    }
+
+    &__text-block1 {
+        margin-bottom: 174px;
+
+        &-p1 {
+            font-family: Work Sans, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 41px;
+            line-height: 120%;
+        }
+
+        &-p2 {
+            font-family: Work Sans, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 41px;
+            line-height: 120%;
+        }
+    }
+
+    &__text-block2 {
+        max-width: 740px;
+
+        &-p {
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 44px;
+            line-height: 49px;
+            margin-bottom: 55px;
+        }
+
+        &-span {
+            background-color: #FFD800;
+            padding-left: 9px;
+            padding-right: 9px;
+        }
+    }
+
+    &__decor-line {
+        width: 95px;
+        height: 5px;
+        background-color: black;
+        margin-bottom: 55px;
+    }
+
+    &__bottom {
+        display: flex;
+        margin-bottom: 151px;
+    }
+
+    &__quotes {
+        width: 28px;
+        height: 21px;
+        margin-right: 47px;
+    }
+
+    &__bottom-p {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25.4741px;
+        line-height: 28px;
+    }
+
+    &__circle {
+        fill: #71C23E;
+        position: absolute;
+        top: 58%;
+        right: -50px;
+        width: 231px;
+        height: 231px;
+    }
+
+    &__decor-line-big {
+        width: 257px;
+        height: 24px;
+        background-color: black;
+        position: absolute;
+        top: 62%;
+        right: 90px;
+    }
+}
+
+// whyus end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+// address @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.map {
+    width: 777px;
+    height: 628px;
+    border: 6px solid black;
+    margin-top: 100px;
+}
+
+.address {
+    width: 100%;
+    box-sizing: border-box;
+    border: 6px solid black;
+    border-top: none;
+    border-bottom: none;
+
+    &__arrow-and-circle {
+        position: static;
+        transform: rotate(180deg);
+        margin-right: calc(100% - 150px);
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
+    &__wrapper {
+        width: 1300px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        padding-top: 124px;
+        margin-bottom: 74px;
+
+        &-h2 {
+            font-family: Abril Fatface, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 64px;
+            line-height: 125%;
+            margin-bottom: 64px;
+        }
+
+        &-p1 {
+            font-family: Work Sans, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 120%;
+            margin-bottom: 24px;
+        }
+
+        &-p2 {
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 150%;
+            margin-bottom: 32px;
+        }
+
+        &-p3 {
+            font-family: Andale Mono, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 120%;
+        }
+    }
+}
+
+// address end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+// footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.footer {
+    &__wrapper {
+        width: 1300px;
+        margin: auto;
+        display: flex;
+    }
+
+    &__nav {
+        margin-top: 41px;
+        margin-bottom: 41px;
+        margin-right: 168px;
+    }
+
+    &__social {
+        margin-top: 35px;
+    }
+
+    &__bottom {
+        background-color: black;
+
+        &-text {
+            margin-top: 21px;
+            margin-bottom: 21px;
+            display: flex;
+        }
+
+        &-p {
+            margin-right: 50px;
+            font-family: Andale Mono, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 120%;
+            color: #858585;
+        }
+    }
+}
+
+// footer end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
