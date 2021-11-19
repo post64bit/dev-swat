@@ -149,7 +149,7 @@
 <header class="small-header">
     <div class="small-header__wrapper">
         <div class="small-header__content">
-            <p class="small-header__logo">DevSwat</p>
+            <img class="small-header__logo" src="./img/svg/min-logo.svg" alt="logo">
             <nav class="small-header__nav">
                 <ul class="small-header__ul">
                     <li class="small-header__li">
@@ -223,14 +223,14 @@
                             </svg>
                         </a>
                     </div>
-                    <svg class="about__figures-long-vector">
-                        <use xlink:href="./img/sprite.svg#long-vector"></use>
-                    </svg>
                 </div>
             </div>
         </div>
         <div class="about__blocks-block2"></div>
         <div class="about__blocks-block3">
+            <svg class="about__long-vector">
+                <use xlink:href="./img/sprite.svg#long-vector"></use>
+            </svg>
             <div class="about__photos">
                 <img class="about__photos-1" src="./img/photo1.png" alt="photo">
                 <img class="about__photos-2" src="./img/photo2.png" alt="photo">
@@ -278,9 +278,6 @@
             <svg class="services__vector">
                 <use xlink:href="./img/sprite.svg#vector"></use>
             </svg>
-            <svg class="services__vector-arrow">
-                <use xlink:href="./img/sprite.svg#vector-arrow"></use>
-            </svg>
             <div class="services__wrapper">
                 <div class="services__content">
                     <div class="services__title">
@@ -308,7 +305,7 @@
                             <svg class="services__icon2 services__all-icon">
                                 <use xlink:href="./img/sprite.svg#star"></use>
                             </svg>
-                            <div class="services__column-name">Development</div>
+                            <div class="services__column-name">Design</div>
                             <div class="services__column-items">
                                 <p class="services__column-item">Corporate Identity</p>
                                 <p class="services__column-item">Logo Design</p>
@@ -324,7 +321,7 @@
                             <svg class="services__icon3 services__all-icon">
                                 <use xlink:href="./img/sprite.svg#star"></use>
                             </svg>
-                            <div class="services__column-name">Development</div>
+                            <div class="services__column-name">Consulting</div>
                             <div class="services__column-items">
                                 <p class="services__column-item">Product Expertise</p>
                                 <p class="services__column-item">Product Support</p>
@@ -339,6 +336,9 @@
         </div>
         <div class="services__blocks-block2"></div>
         <div class="services__blocks-block3">
+            <svg class="services__vector-arrow">
+                <use xlink:href="./img/sprite.svg#vector-arrow"></use>
+            </svg>
             <div class="services__footer-content">
                 <svg class="services__icon4">
                     <use xlink:href="./img/sprite.svg#star"></use>
@@ -454,6 +454,8 @@
                     <div class="ourwork__item-link">
                         <a class="ourwork__item-a" href="#!">
                             Link To Product
+                        </a>
+                        <a class="ourwork__item-a-svg" href="#!">
                             <svg class="ourwork__item-svg">
                                 <use xlink:href="./img/sprite.svg#link"></use>
                             </svg>
@@ -559,6 +561,8 @@
                     <div class="ourwork__item-link">
                         <a class="ourwork__item-a" href="#!">
                             Link To Product
+                        </a>
+                        <a class="ourwork__item-a-svg" href="#!">
                             <svg class="ourwork__item-svg">
                                 <use xlink:href="./img/sprite.svg#link"></use>
                             </svg>
@@ -664,6 +668,8 @@
                     <div class="ourwork__item-link">
                         <a class="ourwork__item-a" href="#!">
                             Link To Product
+                        </a>
+                        <a class="ourwork__item-a-svg" href="#!">
                             <svg class="ourwork__item-svg">
                                 <use xlink:href="./img/sprite.svg#link"></use>
                             </svg>
@@ -769,6 +775,8 @@
                     <div class="ourwork__item-link">
                         <a class="ourwork__item-a" href="#!">
                             Link To Product
+                        </a>
+                        <a class="ourwork__item-a-svg" href="#!">
                             <svg class="ourwork__item-svg">
                                 <use xlink:href="./img/sprite.svg#link"></use>
                             </svg>
@@ -874,6 +882,8 @@
                     <div class="ourwork__item-link">
                         <a class="ourwork__item-a" href="#!">
                             Link To Product
+                        </a>
+                        <a class="ourwork__item-a-svg" href="#!">
                             <svg class="ourwork__item-svg">
                                 <use xlink:href="./img/sprite.svg#link"></use>
                             </svg>
@@ -951,9 +961,9 @@
         <div class="whyus__wrapper">
             <h2 class="whyus__h2">
                 We Successfully<br>help businesses in<br>growing<br>
-                <span class="whyus__h2-span">Significantly,</span>
-                <span class="whyus__h2-span">Profitably,</span> And
-                <span class="whyus__h2-span">Intelligently</span>
+                <span class="whyus__h2-span">Significantly,</span><br>
+                <span class="whyus__h2-span">Profitably,</span> And<br>
+                <span class="whyus__h2-span">Intelligently</span><br>
             </h2>
             <div class="whyus__text-block1">
                 <p class="whyus__text-block1-p1">We increase your profits </p>
@@ -1033,7 +1043,8 @@
         </div>
         <iframe class="map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13346.48790122435!2d51.51454182296545!3d25.38644162325704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c2d0ce75f767%3A0xef22c406e55d7c8b!2sMarina%20Twin%20Towers!5e0!3m2!1sen!2sby!4v1637233628101!5m2!1sen!2sby"
-                allowfullscreen="" loading="lazy"></iframe>
+                allowfullscreen="" loading="lazy">
+        </iframe>
     </div>
     <img class="address__img" src="./img/svg/figures.svg" alt="">
 </section>
@@ -1051,7 +1062,7 @@
     <div class="footer__top">
         <div class="footer__wrapper">
             <nav class="small-header__nav footer__nav">
-                <ul class="small-header__ul">
+                <ul class="small-header__ul footer__ul">
                     <li class="small-header__li">
                         <a class="small-header__link" href="#intro">Intro</a>
                     </li>

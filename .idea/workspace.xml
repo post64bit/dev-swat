@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b02be677-e680-4b89-b7ba-abfbecdc56e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/img/svg/figures.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/svg/min-logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +71,8 @@
       <workItem from="1637159328227" duration="2690000" />
       <workItem from="1637163558167" duration="2892000" />
       <workItem from="1637170439523" duration="464000" />
-      <workItem from="1637220040684" duration="37354000" />
+      <workItem from="1637220040684" duration="38171000" />
+      <workItem from="1637315367489" duration="32924000" />
     </task>
     <servers />
   </component>

@@ -60,6 +60,10 @@ html, body {
     height: 100%;
 }
 
+header, section, footer {
+    overflow: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -135,7 +139,7 @@ body.lock {
     }
 }
 
-@keyframes morph {
+@keyframes morphff {
     0%, 100% {
         border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
         transform: translate3d(0, 0, 0) rotateZ(0deg);
@@ -153,7 +157,7 @@ body.lock {
     }
 }
 
-@keyframes morph2 {
+@keyframes morph2ff {
     0%, 100% {
         border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
         transform: translate3d(0, 0, 0) rotateZ(30deg);
@@ -504,7 +508,7 @@ body.lock {
         right: 0;
         top: 0;
         bottom: 0;
-        margin: auto;
+        margin: 50px auto 50px auto;
         max-width: 1248px;
         max-height: 900px;
     }
@@ -592,7 +596,7 @@ body.lock {
 
 .small-header {
     border: 6px solid black;
-    min-height: 98px;
+    height: 98px;
     position: fixed;
     top: -110px;
     right: 0;
@@ -619,14 +623,12 @@ body.lock {
         align-items: center;
         padding-top: 29px;
         position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     &__logo {
-        font-family: Work Sans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 120%;
+        width: 172px;
         margin-right: 307px;
     }
 
@@ -656,6 +658,14 @@ body.lock {
 // about @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .about {
+
+    &__long-vector {
+        width: 275px;
+        height: 278px;
+        position: absolute;
+        top: -100px;
+        right: 200px;
+    }
 
     &__figures {
         width: 600px;
@@ -694,14 +704,6 @@ body.lock {
             position: absolute;
             left: 45%;
             bottom: 50px;
-        }
-
-        &-long-vector {
-            width: 275px;
-            height: 278px;
-            position: absolute;
-            top: 1100px;
-            left: 100px;
         }
     }
 
@@ -833,6 +835,7 @@ body.lock {
             background-color: black;
             grid-column-start: 1;
             grid-column-end: 4;
+            position: relative;
         }
     }
 }
@@ -861,6 +864,7 @@ body.lock {
             font-weight: normal;
             font-size: 56px;
             line-height: 125%;
+            white-space: nowrap;
         }
 
     }
@@ -934,8 +938,8 @@ body.lock {
         width: 240px;
         height: 240px;
         position: absolute;
-        bottom: -100px;
-        right: 220px;
+        bottom: 200px;
+        right: 300px;
     }
 
     &__blocks {
@@ -1083,7 +1087,7 @@ body.lock {
     }
 
     &__wrapper {
-        width: 1248px;
+        max-width: 1248px;
         margin: auto;
         position: relative;
     }
@@ -1140,7 +1144,7 @@ body.lock {
         margin-top: 12px;
 
         &-img-wrapper {
-            width: 100%;
+            width: 1248px;
             height: 617px;
             overflow: hidden;
             transition: .4s;
@@ -1236,6 +1240,7 @@ body.lock {
 
         &-content {
             display: none;
+
             &-title {
                 font-family: Work Sans, sans-serif;
                 font-style: normal;
@@ -1517,7 +1522,7 @@ body.lock {
     }
 
     &__wrapper {
-        width: 1300px;
+        max-width: 1300px;
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -1570,8 +1575,13 @@ body.lock {
 // footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .footer {
+    &__top {
+        border-left: 6px solid black;
+        border-right: 6px solid black;
+    }
+
     &__wrapper {
-        width: 1300px;
+        max-width: 1300px;
         margin: auto;
         display: flex;
     }
@@ -1608,4 +1618,813 @@ body.lock {
 }
 
 // footer end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+@media (max-width: 1845px) {
+    .about__long-vector {
+        right: 50px;
+    }
+}
+
+@media (max-width: 1445px) {
+    .small-header {
+        height: 50px;
+
+        &__content {
+            padding-top: 6px;
+        }
+    }
+    .burger {
+        &__small-header {
+            top: 10px;
+        }
+    }
+    .intro {
+        grid-template-columns: 6fr 4fr;
+
+        &__block2 {
+            border: 6px solid black;
+        }
+
+        &__block3 {
+            display: none;
+        }
+    }
+    .about {
+        .about__long-vector {
+            right: 0;
+        }
+
+        &__figures {
+            margin-right: 0;
+
+            &-vector {
+                right: 0;
+            }
+
+            &-whatsapp {
+                left: 65%;
+                bottom: 150px;
+            }
+        }
+
+        &__photos {
+            margin-left: 0;
+
+            &-1 {
+                width: 450px;
+            }
+
+            &-2 {
+                width: 350px;
+            }
+        }
+
+        &__info {
+            padding-left: 5vw;
+        }
+
+        &__info-1 {
+            margin-right: 220px;
+        }
+
+        &__blocks {
+            grid-template-columns: 1fr;
+
+            &-block1 {
+                border-right: 6px solid black;
+                overflow: hidden;
+            }
+
+            &-block2 {
+                display: none;
+            }
+        }
+    }
+    .services {
+        &__vector-arrow {
+            right: 120px;
+        }
+
+        &__blocks {
+            grid-template-columns: 1fr;
+
+            &-block1 {
+                border-right: 6px solid black;
+                overflow: hidden;
+            }
+
+            &-block2 {
+                display: none;
+            }
+        }
+    }
+    .whyus {
+        grid-template-columns: 1fr;
+
+        &__h2 {
+            font-size: 80px;
+        }
+
+        &__block1 {
+            overflow: hidden;
+        }
+
+        &__block2 {
+            display: none;
+        }
+
+        &__circle {
+            right: -100px;
+        }
+
+        &__decor-line-big {
+            right: 40px;
+        }
+    }
+    .map {
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media (max-width: 1320px) {
+    .small-header {
+        &__logo {
+            margin-right: 200px;
+        }
+    }
+    .header {
+        &__ul {
+            margin-right: 80px;
+        }
+
+        &__h1 {
+            left: 8vw;
+        }
+
+        &__right {
+
+            &-link {
+                margin-right: 80px;
+            }
+
+            &-svg-links {
+                margin-right: 80px;
+            }
+        }
+    }
+
+    .intro__wrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .services__content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .whyus__wrapper {
+        margin-left: 20px;
+    }
+    .about {
+        &__figures {
+            margin-right: -50px;
+        }
+
+        &__blocks-block1-left {
+            margin-left: 20px;
+        }
+    }
+    .ourwork {
+
+        &__wrapper {
+            max-width: 1048px;
+        }
+
+        // item @@@@@@@@@@@
+        &__item {
+            &-img-wrapper {
+                width: 100%;
+            }
+
+            &-detailed-description {
+                flex-direction: column;
+            }
+
+            &-summary {
+                margin-bottom: 50px;
+            }
+        }
+
+        // item end @@@@@@@@@@@@
+    }
+    .address {
+        &__text {
+            margin-left: 20px;
+        }
+    }
+    .address__arrow-and-circle {
+        margin-right: 150px;
+    }
+    .footer {
+        &__nav {
+            margin-left: 20px;
+        }
+
+        &__bottom {
+            &-text {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .small-header {
+        &__logo {
+            margin-right: 100px;
+        }
+    }
+    .header {
+        &__ul {
+            margin-right: 100px;
+        }
+
+        &__li {
+            margin-bottom: 46px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:first-child {
+                margin-top: 50px;
+            }
+        }
+
+        &__li-link {
+            font-size: 20px;
+        }
+        &__h1 {
+            font-size: 52px;
+            bottom: 13vh;
+        }
+
+        &__right {
+            &-link {
+                font-size: 20px;
+                margin-right: 100px;
+            }
+
+            &-svg-links {
+                margin-right: 100px;
+            }
+        }
+    }
+
+    .arrow-and-circle {
+        &__circle {
+            width: 130px;
+        }
+
+        &__arrow {
+            top: 55px;
+            left: 25px;
+        }
+
+        &__arrow div {
+            top: 24px;
+            width: 30px;
+            height: 3px;
+            left: 7px;
+        }
+
+        &__arrow div::before {
+            width: 15px;
+            height: 3px;
+            top: 5px;
+            right: -5px;
+        }
+
+        &__arrow div::after {
+            width: 15px;
+            height: 3px;
+            top: -5px;
+            right: -5px;
+        }
+    }
+    .intro {
+        &__wrapper {
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+
+        &__content {
+            &-logo {
+                max-width: 300px;
+            }
+
+            &-h1 {
+                font-size: 55px;
+                line-height: 125%;
+            }
+
+            &-p {
+                font-size: 20px;
+            }
+
+            &-vertical-links {
+                font-size: 20px;
+            }
+        }
+    }
+    .blobs {
+
+        &__blob1 {
+            width: 425px;
+            height: 332px;
+            border: 4px solid black;
+        }
+
+        &__blob2 {
+            width: 325px;
+            height: 442px;
+            border: 4px solid black;
+            top: -40px;
+        }
+
+        &__blob3 {
+            width: 425px;
+            height: 352px;
+            border: 4px solid black;
+            top: -10px;
+            left: 40px;
+        }
+
+        &__blob4 {
+            width: 325px;
+            height: 462px;
+            border: 4px solid black;
+            top: -30px;
+            left: 120px;
+        }
+
+        &__blob5 {
+            width: 425px;
+            height: 372px;
+            border: 4px solid black;
+            top: 20px;
+            left: 50px;
+        }
+    }
+    .whatsapp__svg {
+        width: 60px;
+        height: 60px;
+    }
+    .burger {
+        &__button {
+            height: 40px;
+            width: 40px;
+        }
+
+        &__span {
+            height: 4px;
+
+            &:nth-child(2) {
+                top: 10px;
+            }
+
+            &:nth-child(3) {
+                top: 20px;
+            }
+        }
+    }
+    .about {
+
+        &__long-vector {
+            width: 200px;
+            height: 200px;
+        }
+
+        &__figures {
+            width: 400px;
+            height: 650px;
+
+            &-circle {
+                width: 190px;
+                height: 190px;
+                left: 40px;
+            }
+
+            &-various {
+                width: 529px;
+                height: 530px;
+                right: -50px;
+            }
+
+            &-vector {
+                width: 220px;
+                height: 200px;
+                right: -50px;
+                top: 450px;
+            }
+
+        }
+
+        &__h2 {
+            font-size: 54px;
+            margin-bottom: 58px;
+        }
+
+        &__text1 {
+            font-size: 17px;
+            margin-bottom: 58px;
+        }
+
+        &__text-decor {
+            height: 4px;
+        }
+
+        &__text2 {
+            font-size: 19px;
+            margin-bottom: 510px;
+        }
+
+        &__photos {
+            margin-bottom: 60px;
+
+            &-1 {
+                width: 410px;
+            }
+
+            &-2 {
+                width: 310px;
+            }
+        }
+
+        &__info-1 {
+            margin-right: 150px;
+        }
+
+        &__info-2 {
+            margin-bottom: 107px;
+        }
+
+        &__name {
+            font-size: 22px;
+        }
+
+        &__position {
+            font-size: 17px;
+        }
+
+        &__icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .ticker {
+        height: 70px;
+        border: 4px solid black;
+
+        div {
+            p {
+                font-size: 36px;
+            }
+        }
+    }
+    .ticker2 {
+        background-color: black;
+        color: white;
+        border-right: 4px solid black;
+        border-left: 4px solid black;
+        border-top: 4px solid white;
+        border-bottom: 4px solid white;
+    }
+    .services {
+        &__vector {
+            width: 200px;
+            height: 200px;
+        }
+
+        &__vector-arrow {
+            width: 200px;
+            height: 200px;
+            bottom: 190px;
+            right: 100px;
+        }
+
+        &__title {
+            margin-top: 103px;
+            margin-bottom: 102px;
+        }
+
+        &__h2 {
+            font-size: 54px;
+        }
+
+        &__text {
+            font-size: 26px;
+        }
+
+        &__all-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        &__icon4 {
+            width: 38px;
+        }
+
+        &__footer-text1 {
+            font-size: 27px;
+        }
+
+        &__footer-text2 {
+            font-size: 20px;
+        }
+
+        &__column-name {
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+
+        &__column-item {
+            font-size: 18px;
+        }
+
+        &__columns {
+            max-width: 95vw;
+        }
+
+        &__decor {
+            height: 154px;
+            width: 5px;
+        }
+    }
+    .ourwork {
+        &__decor-line {
+            height: 5px;
+        }
+
+        &__arrow-and-circle {
+            top: 120px;
+            margin-left: 30px;
+        }
+
+        &__title-text {
+            padding-top: 115px;
+            margin-bottom: 113px;
+            margin-right: 20px;
+
+            &-h2 {
+                font-size: 54px;
+            }
+
+            &-p {
+                font-size: 22px;
+            }
+        }
+
+        &__load-more {
+            font-size: 16px;
+        }
+
+        // item @@@@@@@@@@@
+        &__item {
+            margin-left: 20px;
+            margin-right: 20px;
+
+            &-img-wrapper {
+                height: 417px;
+
+                &.active {
+                    height: 317px;
+                }
+            }
+
+            &-trigger {
+                margin-bottom: 42px;
+            }
+
+            &-a {
+                font-size: 16px;
+            }
+
+            &-svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            &-description {
+                max-width: 712px;
+
+                &-item1 {
+                    font-size: 20px;
+                }
+
+                &-item-dot {
+                    font-size: 20px;
+                }
+
+                &-item2 {
+                    font-size: 38px;
+                }
+
+                &-item3 {
+                    font-size: 16px;
+                }
+            }
+
+            &-content {
+                &-title {
+                    font-size: 28px;
+                }
+            }
+
+            &-summary {
+                &-blocks {
+                    max-width: 341px;
+                }
+            }
+        }
+
+        // item end @@@@@@@@@@@@
+        &__icon {
+            width: 52px;
+            height: 42px;
+        }
+    }
+    .whyus {
+        &__h2 {
+            font-size: 60px;
+            margin-bottom: 70px;
+        }
+
+        &__text-block1 {
+            margin-bottom: 74px;
+
+            &-p1 {
+                font-size: 31px;
+            }
+
+            &-p2 {
+                font-size: 31px;
+            }
+        }
+
+        &__text-block2 {
+
+            &-p {
+                font-size: 34px;
+            }
+        }
+
+        &__decor-line {
+            margin-bottom: 45px;
+        }
+
+        &__bottom-p {
+            font-size: 20px;
+        }
+
+        &__circle {
+            width: 200px;
+            height: 200px;
+        }
+
+        &__decor-line-big {
+            width: 200px;
+            height: 20px;
+            right: 20px;
+        }
+
+        &__block1 {
+            border-bottom: none;
+        }
+    }
+    .address {
+
+        &__text {
+            &-h2 {
+                font-size: 44px;
+                margin-bottom: 30px;
+            }
+
+            &-p1 {
+                font-size: 27px;
+            }
+
+            &-p2 {
+                font-size: 18px;
+            }
+
+            &-p3 {
+                font-size: 16px;
+            }
+        }
+    }
+    .map {
+        width: 650px;
+        height: 500px;
+    }
+    .footer {
+        &__wrapper {
+            max-width: 1300px;
+            margin: auto;
+            display: flex;
+        }
+
+        &__nav {
+            margin-top: 21px;
+            margin-bottom: 21px;
+        }
+
+        &__social {
+            margin-top: 18px;
+        }
+
+        &__bottom {
+            &-p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 945px) {
+    .ourwork__item-a {
+        display: none;
+    }
+    .small-header {
+        &__ul {
+            max-width: 420px;
+        }
+        &__logo {
+            margin-right: 50px;
+        }
+    }
+    .footer__ul {
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 900px) {
+    .map {
+        width: 550px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 830px) {
+    .map {
+        width: 500px;
+        height: 350px;
+    }
+    .about {
+        &__long-vector {
+            width: 150px;
+            height: 150px;
+        }
+        &__figures {
+            margin-right: -80px;
+
+            &-circle {
+                width: 150px;
+                height: 150px;
+                left: 120px;
+            }
+            &-various {
+                width: 429px;
+                height: 430px;
+            }
+            &-vector {
+                width: 180px;
+                height: 180px;
+                top: 350px;
+            }
+        }
+    }
+    .whyus {
+        &__circle {
+            top: 45%;
+        }
+
+        &__decor-line-big {
+            top: 50%;
+        }
+    }
+    .ourwork {
+        &__item {
+            &-svg {
+                margin-left: 20px;
+            }
+            &-features {
+                &-blocks {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+
 
