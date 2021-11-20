@@ -27,10 +27,13 @@ $(function() {
 
     window.onscroll = function showHeader () {
         let header = document.querySelector('.small-header')
+        let whatsapp = document.querySelector('.whatsapp__pinned')
         if(window.pageYOffset > 1000) {
             header.classList.add('active')
+            whatsapp.classList.add('active')
         } else {
             header.classList.remove('active')
+            whatsapp.classList.remove('active')
         }
     }
 

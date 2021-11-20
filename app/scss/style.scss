@@ -243,6 +243,18 @@ body.lock {
 
 // whatsapp @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+.whatsapp__pinned {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 5;
+    opacity: 0;
+    transition: .4s;
+    &.active {
+        opacity: 1;
+    }
+}
+
 .whatsapp {
     position: absolute;
     bottom: 0;
@@ -698,12 +710,6 @@ body.lock {
             right: -16px;
             bottom: 100px;
             transition: all 0.1s ease;
-        }
-
-        &-whatsapp {
-            position: absolute;
-            left: 45%;
-            bottom: 50px;
         }
     }
 
@@ -1581,9 +1587,6 @@ body.lock {
 // footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .footer {
-    &__whatsapp {
-        display: none;
-    }
     &__top {
         border-left: 6px solid black;
         border-right: 6px solid black;
@@ -1668,11 +1671,6 @@ body.lock {
 
             &-vector {
                 right: 0;
-            }
-
-            &-whatsapp {
-                left: 65%;
-                bottom: 150px;
             }
         }
 
@@ -2447,9 +2445,6 @@ body.lock {
     .footer__nav {
         margin-right: 30px;
     }
-    .whatsapp__svg {
-        right: 100px;
-    }
 }
 
 @media (max-width: 770px) {
@@ -2801,12 +2796,6 @@ body.lock {
     }
     .footer {
         position: relative;
-        &__whatsapp {
-            display: block;
-            position: absolute;
-            right: 50px;
-            bottom: 70px;
-        }
         &__ul {
             display: block;
             max-width: 50vw;
@@ -2906,6 +2895,10 @@ body.lock {
 }
 
 @media (max-width: 500px) {
+    .whatsapp__pinned {
+        bottom: 30px;
+        right: 30px;
+    }
     .whyus__decor-line-big {
         right: -70px;
     }
