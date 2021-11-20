@@ -139,7 +139,7 @@ body.lock {
     }
 }
 
-@keyframes morphff {
+@keyframes morph {
     0%, 100% {
         border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
         transform: translate3d(0, 0, 0) rotateZ(0deg);
@@ -157,7 +157,7 @@ body.lock {
     }
 }
 
-@keyframes morph2ff {
+@keyframes morph2 {
     0%, 100% {
         border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
         transform: translate3d(0, 0, 0) rotateZ(30deg);
@@ -1190,11 +1190,17 @@ body.lock {
             margin-bottom: 69px;
         }
 
-        &-description {
-            width: 712px;
+        &-description-block {
             display: flex;
             justify-content: space-between;
+            width: 350px;
             align-items: center;
+            margin-right: 30px;
+        }
+
+        &-description {
+            display: flex;
+            justify-content: space-between;
 
             &-item1 {
                 font-family: Roboto, sans-serif;
@@ -1855,6 +1861,7 @@ body.lock {
             &:last-child {
                 margin-bottom: 0;
             }
+
             &:first-child {
                 margin-top: 50px;
             }
@@ -1863,6 +1870,7 @@ body.lock {
         &__li-link {
             font-size: 20px;
         }
+
         &__h1 {
             font-size: 52px;
             bottom: 13vh;
@@ -2214,8 +2222,11 @@ body.lock {
                 height: 16px;
             }
 
+            &-description-block {
+                width: 250px;
+            }
+
             &-description {
-                max-width: 712px;
 
                 &-item1 {
                     font-size: 20px;
@@ -2244,6 +2255,10 @@ body.lock {
                 &-blocks {
                     max-width: 341px;
                 }
+            }
+
+            &-a {
+                display: none;
             }
         }
 
@@ -2351,13 +2366,11 @@ body.lock {
 }
 
 @media (max-width: 945px) {
-    .ourwork__item-a {
-        display: none;
-    }
     .small-header {
         &__ul {
             max-width: 420px;
         }
+
         &__logo {
             margin-right: 50px;
         }
@@ -2384,6 +2397,7 @@ body.lock {
             width: 150px;
             height: 150px;
         }
+
         &__figures {
             margin-right: -80px;
 
@@ -2392,10 +2406,12 @@ body.lock {
                 height: 150px;
                 left: 120px;
             }
+
             &-various {
                 width: 429px;
                 height: 430px;
             }
+
             &-vector {
                 width: 180px;
                 height: 180px;
@@ -2417,6 +2433,7 @@ body.lock {
             &-svg {
                 margin-left: 20px;
             }
+
             &-features {
                 &-blocks {
                     flex-direction: column;
@@ -2424,7 +2441,496 @@ body.lock {
             }
         }
     }
+    .footer__nav {
+        margin-right: 30px;
+    }
+    .whatsapp__svg {
+        right: 100px;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .small-header__ul {
+        display: none;
+    }
+    .intro {
+        &__wrapper {
+            margin-left: 29px;
+            margin-right: 29px;
+        }
+
+        &__content {
+            &-logo {
+                max-width: 190px;
+                margin-left: 17px;
+                margin-top:30px;
+            }
+
+            &-h1 {
+                font-size: 40px;
+            }
+
+            &-p {
+                font-size: 16px;
+            }
+
+            &-vertical-links {
+                display: none;
+            }
+        }
+    }
+    .arrow-and-circle {
+        margin-left: 15px;
+
+        &__circle {
+            width: 106px;
+        }
+
+        &__arrow {
+            top: 45px;
+            left: 13px;
+        }
+    }
+    .header {
+        &__right {
+            width: 90%;
+        }
+
+        &__left {
+            width: 10%;
+        }
+
+        &__ul {
+            margin-right: 50px;
+        }
+
+        &__li {
+            margin-bottom: 40px;
+        }
+
+        &__li-link {
+            font-size: 24px;
+        }
+
+        &__h1 {
+            display: none;
+        }
+
+        &__right {
+            &-link {
+                font-size: 24px;
+                margin-right: 50px;
+            }
+
+            &-svg-links {
+                margin-right: 50px;
+                margin-top: 10px;
+            }
+        }
+    }
+    .icon {
+        width: 37px;
+        height: 37px;
+    }
+    .blobs {
+        top: 22%;
+        left: 20%;
+
+        &__blob1 {
+            width: 325px;
+            height: 232px;
+        }
+
+        &__blob2 {
+            width: 225px;
+            height: 342px;
+        }
+
+        &__blob3 {
+            width: 325px;
+            height: 252px;
+        }
+
+        &__blob4 {
+            width: 225px;
+            height: 362px;
+        }
+
+        &__blob5 {
+            width: 325px;
+            height: 272px;
+        }
+    }
+    .whatsapp__svg {
+        width: 56px;
+        height: 56px;
+    }
+    .about {
+        &__blocks-block1-right {
+            margin-right: -200px;
+        }
+
+        &__long-vector {
+            width: 100px;
+            height: 100px;
+        }
+
+        &__figures {
+
+            &-circle {
+                width: 100px;
+                height: 100px;
+                left: 50px;
+                top: 50px;
+            }
+
+            &-various {
+                width: 300px;
+                height: 300px;
+                right: 120px;
+                top: 0;
+            }
+
+            &-vector {
+                width: 120px;
+                height: 120px;
+                top: 290px;
+                right: 230px;
+            }
+        }
+
+        &__text2 {
+            margin-bottom: 800px;
+        }
+
+        &__photos {
+            display: block;
+
+            &-1 {
+                display: block;
+                margin-top: -750px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            &-2 {
+                display: block;
+                margin-left: auto;
+                margin-right: 40px;
+                margin-top: 200px;
+            }
+        }
+
+        &__info {
+            display: block;
+        }
+
+        &__info-1 {
+            margin-top: -330px;
+            margin-bottom: 550px;
+        }
+
+        &__name-black {
+            color: black;
+        }
+
+        &__icon-black {
+            fill: black;
+        }
+    }
+    .ticker {
+        height: 93px;
+
+        div {
+            p {
+                font-size: 44px;
+            }
+        }
+    }
+    .services {
+        &__column3 {
+            margin-right: 20px;
+        }
+
+        &__vector {
+            width: 120px;
+            height: 120px;
+            top: -20px;
+            right: -10px;
+        }
+
+        &__vector-arrow {
+            display: none;
+        }
+
+        &__columns {
+            flex-direction: column;
+        }
+
+        &__column1, &__column2 {
+            margin-bottom: 60px;
+        }
+
+        &__decor {
+            height: 6px;
+            width: 214px;
+            margin-bottom: 60px;
+        }
+
+        &__h2 {
+            font-size: 40px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__column-name {
+            font-size: 32px;
+        }
+
+        &__column-item {
+            font-size: 21px;
+        }
+
+        &__footer-text1 {
+            font-size: 24px;
+        }
+
+        &__footer-text2 {
+            font-size: 18px;
+        }
+    }
+    .ourwork {
+
+        &__arrow-and-circle {
+            margin-left: 30px;
+        }
+
+        &__title-text {
+            &-h2 {
+                font-size: 40px;
+            }
+
+            &-p {
+                font-size: 18px;
+            }
+        }
+
+        &__load-more {
+            font-size: 16px;
+        }
+    }
+    .whyus {
+        &__h2 {
+            font-size: 44px;
+        }
+        &__text-block1 {
+            &-p1 {
+                font-size: 18px;
+            }
+            &-p2 {
+                font-size: 18px;
+            }
+        }
+        &__text-block2 {
+            width: 400px;
+            &-p {
+                font-size: 21px;
+                line-height: 28px;
+            }
+        }
+        &__decor-line {
+            height: 4px;
+        }
+        &__bottom-p {
+            font-size: 15px;
+        }
+        &__quotes {
+            width: 15px;
+        }
+        &__circle {
+            top: 40%;
+        }
+    }
+    .map {
+        width: 90vw;
+        height: 258px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 25px;
+    }
+    .address {
+
+        &__text {
+            margin-top: 350px;
+            padding: 0;
+            &-h2 {
+                font-size: 40px;
+            }
+
+            &-p1 {
+                font-size: 32px;
+            }
+
+            &-p2 {
+                font-size: 16px;
+            }
+
+            &-p3 {
+                font-size: 16px;
+            }
+        }
+    }
+    .footer {
+        &__ul {
+            display: block;
+            max-width: 50vw;
+        }
+
+        &__li {
+            margin-bottom: 15px;
+        }
+        &__nav {
+            margin-top: 26px;
+            margin-bottom: 21px;
+        }
+
+        &__social {
+            margin-top: 18px;
+        }
+
+        &__bottom {
+            &-p {
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 
+@media (max-width: 640px) {
+    .ourwork {
+        &__item {
+            &-description {
+                flex-direction: column;
+            }
+            &-description-block {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .blobs {
+        left: 10%;
+        &__blob1 {
+            width: 225px;
+            height: 192px;
+        }
+
+        &__blob2 {
+            width: 195px;
+            height: 242px;
+            top: -10px;
+            left: 10px;
+        }
+
+        &__blob3 {
+            width: 225px;
+            height: 192px;
+            top: 10px;
+            left: 10px;
+        }
+
+        &__blob4 {
+            width: 195px;
+            height: 262px;
+            top: -10px;
+            left: 50px;
+        }
+
+        &__blob5 {
+            width: 225px;
+            height: 192px;
+            top: -10px;
+            left: 50px;
+        }
+    }
+    .footer {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__nav {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 100px;
+        }
+        &__social {
+            margin: auto;
+            padding-right: 20px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .whyus__decor-line-big {
+        right: -70px;
+    }
+    .services__footer-text {
+        width: 200px;
+    }
+    .about {
+        &__photos {
+
+            &-1 {
+                width: 90vw;
+            }
+
+            &-2 {
+                margin-top: 200px;
+            }
+        }
+
+        &__info-1 {
+            margin-top: -300px;
+        }
+    }
+}
+
+@media (max-width: 445px) {
+    .about {
+        &__photos {
+
+            &-2 {
+                margin-top: 250px;
+            }
+        }
+
+        &__info-1 {
+            margin-top: -340px;
+            margin-bottom: 550px;
+        }
+    }
+    .whyus {
+        &__h2 {
+            width: 350px;
+        }
+        &__text-block2 {
+            width: 350px;
+        }
+        &__circle {
+            right: -150px;
+            top: 45%;
+        }
+        &__decor-line-big {
+            right: -100px;
+        }
+    }
+
+}
 
