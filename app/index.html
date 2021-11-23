@@ -109,7 +109,7 @@
                                 </path>
                             </defs>
                             <text dy="50" textLength="1220">
-                                <textPath xlink:href="#textcircle">
+                                <textPath class="circle-text" xlink:href="#textcircle">
                                     scroll sideways to navigate •
                                 </textPath>
                             </text>
@@ -182,16 +182,16 @@
                     </li>
                 </ul>
             </nav>
-            <div class="burger burger__small-header">
-                <button class="burger__button">
-                    <span class="burger__span"></span>
-                    <span class="burger__span"></span>
-                    <span class="burger__span"></span>
-                </button>
-            </div>
         </div>
     </div>
 </header>
+<div class="burger burger__fixed">
+    <button class="burger__button">
+        <span class="burger__span"></span>
+        <span class="burger__span"></span>
+        <span class="burger__span"></span>
+    </button>
+</div>
 <section class="about" id="about">
     <div class="about__blocks">
         <div class="about__blocks-block1">
@@ -370,7 +370,7 @@
         <div class="ourwork__title">
             <a href="#whyus">
                 <div class="arrow-and-circle ourwork__arrow-and-circle">
-                    <svg class="arrow-and-circle__circle"
+                    <svg fill="white" class="arrow-and-circle__circle"
                          xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink"
                          viewBox="0 0 500 500">
@@ -389,8 +389,8 @@
                             </path>
                         </defs>
                         <text dy="50" textLength="1220">
-                            <textPath class="ourwork__circle-text" xlink:href="#textcircle">
-                                scroll sideways to navigate •
+                            <textPath xlink:href="#textcircle">
+                                Scroll down • Scroll down •
                             </textPath>
                         </text>
                     </svg>
@@ -426,8 +426,8 @@
                             </path>
                         </defs>
                         <text dy="50" textLength="1220">
-                            <textPath xlink:href="#textcircle">
-                                scroll sideways to navigate •
+                            <textPath class="ourwork__icon-text" xlink:href="#textcircle">
+                                click to see more • click to see more •
                             </textPath>
                         </text>
                     </svg>
@@ -438,22 +438,23 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img2.png" alt="work">
+                    <img class="ourwork__item-img" src="./img/work-img1.png" alt="work">
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
-                        <div class="ourwork__item-description-block">
+                        <div class="ourwork__item-description-block1">
                             <p class="ourwork__item-description-item1">01</p>
                             <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item2">Collage</p>
+                            <p class="ourwork__item-description-item2">HS Recruiter</p>
                             <p class="ourwork__item-description-item-dot">•</p>
                         </div>
-                        <div class="ourwork__item-description-block">
+                        <div class="ourwork__item-description-block2">
+                            <p class="ourwork__item-description-item-dot ourwork__item-description-item-dot-show">•</p>
+                            <p class="ourwork__item-description-item3">Web App</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
                             <p class="ourwork__item-description-item3">Mobile App</p>
                             <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item3">E-Commerce</p>
-                            <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item3">Fashion</p>
+                            <p class="ourwork__item-description-item3">Sports</p>
                         </div>
                     </div>
                     <div class="ourwork__item-link">
@@ -469,7 +470,7 @@
                 </div>
             </div>
             <div class="ourwork__item-content">
-                <p class="ourwork__item-content-title">Analytics & Management<br>Tool for High Schools</p>
+                <p class="ourwork__item-content-title">Recruiting Platform for<br>young athletes</p>
                 <div class="ourwork__item-detailed-description">
                     <div class="ourwork__item-summary">
                         <p class="ourwork__item-summary-title">Project Summary</p>
@@ -481,8 +482,8 @@
                             </div>
                             <div class="ourwork__item-summary-info">
                                 <p class="ourwork__item-summary-info-item">Daytona Beach, FL, USA</p>
-                                <p class="ourwork__item-summary-info-item">7,000,000 QAR </p>
-                                <p class="ourwork__item-summary-info-item">2 years</p>
+                                <p class="ourwork__item-summary-info-item">1 200 000 QAR</p>
+                                <p class="ourwork__item-summary-info-item">1 year</p>
                             </div>
                         </div>
                     </div>
@@ -490,21 +491,15 @@
                         <p class="ourwork__item-features-title">Features</p>
                         <div class="ourwork__item-features-blocks">
                             <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Smart “Get Started” guiding system</p>
-                                <p class="ourwork__item-features-block-item">• Role oriented dashboard </p>
-                                <p class="ourwork__item-features-block-item">• Articles publishing tools</p>
-                                <p class="ourwork__item-features-block-item">• Games coverage tools</p>
+                                <p class="ourwork__item-features-block-item">• Performance and training history.</p>
+                                <p class="ourwork__item-features-block-item">• Key stats, video, achievements and<br>
+                                    education on one pro style page. </p>
+                                <p class="ourwork__item-features-block-item">• Coaches CRM system.</p>
                             </div>
                             <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Smart notifications system</p>
-                                <p class="ourwork__item-features-block-item">• Ability to add or hide analytics</p>
-                                <p class="ourwork__item-features-block-item">• Meeting scheduling functionality</p>
-                                <p class="ourwork__item-features-block-item">• Calendar with extended functionality</p>
-                            </div>
-                            <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Events & meetings management tools</p>
-                                <p class="ourwork__item-features-block-item">• Tasks & reminders functionality</p>
-                                <p class="ourwork__item-features-block-item">• A summary of all team statuses</p>
+                                <p class="ourwork__item-features-block-item">• Tools for professional recruiting.</p>
+                                <p class="ourwork__item-features-block-item">• Plans & Subscriptions model.</p>
+                                <p class="ourwork__item-features-block-item">• Platform connectivity and import capabilities.</p>
                             </div>
                         </div>
                     </div>
@@ -538,8 +533,8 @@
                             </path>
                         </defs>
                         <text dy="50" textLength="1220">
-                            <textPath xlink:href="#textcircle">
-                                scroll sideways to navigate •
+                            <textPath class="ourwork__icon-text" xlink:href="#textcircle">
+                                click to see more • click to see more •
                             </textPath>
                         </text>
                     </svg>
@@ -554,13 +549,122 @@
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
-                        <div class="ourwork__item-description-block">
+                        <div class="ourwork__item-description-block1">
                             <p class="ourwork__item-description-item1">02</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
+                            <p class="ourwork__item-description-item2">EDUS</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
+                        </div>
+                        <div class="ourwork__item-description-block2">
+                            <p class="ourwork__item-description-item-dot ourwork__item-description-item-dot-show">•</p>
+                            <p class="ourwork__item-description-item3">Web App</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
+                            <p class="ourwork__item-description-item3">Mobile App</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
+                            <p class="ourwork__item-description-item3">Education Platform</p>
+                        </div>
+                    </div>
+                    <div class="ourwork__item-link">
+                        <a class="ourwork__item-a" href="#!">
+                            Link To Product
+                        </a>
+                        <a class="ourwork__item-a-svg" href="#!">
+                            <svg class="ourwork__item-svg">
+                                <use xlink:href="./img/sprite.svg#link"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ourwork__item-content">
+                <p class="ourwork__item-content-title">A digital office for your<br>school</p>
+                <div class="ourwork__item-detailed-description">
+                    <div class="ourwork__item-summary">
+                        <p class="ourwork__item-summary-title">Project Summary</p>
+                        <div class="ourwork__item-summary-blocks">
+                            <div class="ourwork__item-summary-description">
+                                <p class="ourwork__item-summary-description-item">Location:</p>
+                                <p class="ourwork__item-summary-description-item">Product budget:</p>
+                                <p class="ourwork__item-summary-description-item">Project timing:</p>
+                            </div>
+                            <div class="ourwork__item-summary-info">
+                                <p class="ourwork__item-summary-info-item">Ukraine</p>
+                                <p class="ourwork__item-summary-info-item">460 000 QAR </p>
+                                <p class="ourwork__item-summary-info-item">18 months </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ourwork__item-features">
+                        <p class="ourwork__item-features-title">Features</p>
+                        <div class="ourwork__item-features-blocks">
+                            <div class="ourwork__item-features-block">
+                                <p class="ourwork__item-features-block-item">• Workspace with embedded tools.</p>
+                                <p class="ourwork__item-features-block-item">• Class and pupil performance statistics.</p>
+                                <p class="ourwork__item-features-block-item">• Automatic synchronization of the thematic calender planning with the electronic journal.</p>
+                            </div>
+                            <div class="ourwork__item-features-block">
+                                <p class="ourwork__item-features-block-item">• Training Library and Thematic calendar planning. </p>
+                                <p class="ourwork__item-features-block-item">• A separate electronic journal for primary school, created on the recommendations of the new Ukrainian school. </p>
+                            </div>
+                            <div class="ourwork__item-features-block">
+                                <p class="ourwork__item-features-block-item">• EDUS unites students, teachers, parents and school leaders around the learning environment in a single, convenient and safe platform. It’s easy to plug, configure and use. Anywhere, anytime.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="ourwork__item-rights">
+                    All Rights Reserved by the Author. Copyright law prohibits the copying or<br>
+                    publication of any work which does not have the owner's permission.
+                </p>
+            </div>
+            <div class="ourwork__decor-line"></div>
+        </div>
+        <div class="ourwork__item">
+            <div class="ourwork__item-trigger">
+                <div class="ourwork__item-circle">
+                    <svg class="arrow-and-circle__circle"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 500 500">
+                        <defs>
+                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                                  id="textcircle">
+                                <animateTransform
+                                        attributeName="transform"
+                                        begin="0s"
+                                        dur="30s"
+                                        type="rotate"
+                                        from="0 250 250"
+                                        to="360 250 250"
+                                        repeatCount="indefinite"
+                                />
+                            </path>
+                        </defs>
+                        <text dy="50" textLength="1220">
+                            <textPath class="ourwork__icon-text" xlink:href="#textcircle">
+                                click to see more • click to see more •
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="ourwork__view">
+                        <svg class="ourwork__icon">
+                            <use class="ourwork__icon-href" xlink:href="./img/sprite.svg#see-more"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ourwork__item-img-wrapper">
+                    <img class="ourwork__item-img" src="./img/work-img3.png" alt="work">
+                </div>
+                <div class="ourwork__item-text">
+                    <div class="ourwork__item-description">
+                        <div class="ourwork__item-description-block1">
+                            <p class="ourwork__item-description-item1">03</p>
                             <p class="ourwork__item-description-item-dot">•</p>
                             <p class="ourwork__item-description-item2">HS Sports</p>
                             <p class="ourwork__item-description-item-dot">•</p>
                         </div>
-                        <div class="ourwork__item-description-block">
+                        <div class="ourwork__item-description-block2">
+                            <p class="ourwork__item-description-item-dot ourwork__item-description-item-dot-show">•</p>
                             <p class="ourwork__item-description-item3">Web App</p>
                             <p class="ourwork__item-description-item-dot">•</p>
                             <p class="ourwork__item-description-item3">CRM System</p>
@@ -650,8 +754,8 @@
                             </path>
                         </defs>
                         <text dy="50" textLength="1220">
-                            <textPath xlink:href="#textcircle">
-                                scroll sideways to navigate •
+                            <textPath class="ourwork__icon-text" xlink:href="#textcircle">
+                                click to see more • click to see more •
                             </textPath>
                         </text>
                     </svg>
@@ -662,135 +766,22 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img2.png" alt="work">
+                    <img class="ourwork__item-img" src="./img/work-img4.png" alt="work">
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
-                        <div class="ourwork__item-description-block">
-                            <p class="ourwork__item-description-item1">03</p>
-                            <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item2">Collage</p>
-                            <p class="ourwork__item-description-item-dot">•</p>
-                        </div>
-                        <div class="ourwork__item-description-block">
-                            <p class="ourwork__item-description-item3">Mobile App</p>
-                            <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item3">E-Commerce</p>
-                            <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item3">Fashion</p>
-                        </div>
-                    </div>
-
-                    <div class="ourwork__item-link">
-                        <a class="ourwork__item-a" href="#!">
-                            Link To Product
-                        </a>
-                        <a class="ourwork__item-a-svg" href="#!">
-                            <svg class="ourwork__item-svg">
-                                <use xlink:href="./img/sprite.svg#link"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ourwork__item-content">
-                <p class="ourwork__item-content-title">Analytics & Management<br>Tool for High Schools</p>
-                <div class="ourwork__item-detailed-description">
-                    <div class="ourwork__item-summary">
-                        <p class="ourwork__item-summary-title">Project Summary</p>
-                        <div class="ourwork__item-summary-blocks">
-                            <div class="ourwork__item-summary-description">
-                                <p class="ourwork__item-summary-description-item">Location:</p>
-                                <p class="ourwork__item-summary-description-item">Product budget:</p>
-                                <p class="ourwork__item-summary-description-item">Project timing:</p>
-                            </div>
-                            <div class="ourwork__item-summary-info">
-                                <p class="ourwork__item-summary-info-item">Daytona Beach, FL, USA</p>
-                                <p class="ourwork__item-summary-info-item">7,000,000 QAR </p>
-                                <p class="ourwork__item-summary-info-item">2 years</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ourwork__item-features">
-                        <p class="ourwork__item-features-title">Features</p>
-                        <div class="ourwork__item-features-blocks">
-                            <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Smart “Get Started” guiding system</p>
-                                <p class="ourwork__item-features-block-item">• Role oriented dashboard </p>
-                                <p class="ourwork__item-features-block-item">• Articles publishing tools</p>
-                                <p class="ourwork__item-features-block-item">• Games coverage tools</p>
-                            </div>
-                            <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Smart notifications system</p>
-                                <p class="ourwork__item-features-block-item">• Ability to add or hide analytics</p>
-                                <p class="ourwork__item-features-block-item">• Meeting scheduling functionality</p>
-                                <p class="ourwork__item-features-block-item">• Calendar with extended functionality</p>
-                            </div>
-                            <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Events & meetings management tools</p>
-                                <p class="ourwork__item-features-block-item">• Tasks & reminders functionality</p>
-                                <p class="ourwork__item-features-block-item">• A summary of all team statuses</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="ourwork__item-rights">
-                    All Rights Reserved by the Author. Copyright law prohibits the copying or<br>
-                    publication of any work which does not have the owner's permission.
-                </p>
-            </div>
-            <div class="ourwork__decor-line"></div>
-        </div>
-        <div class="ourwork__item">
-            <div class="ourwork__item-trigger">
-                <div class="ourwork__item-circle">
-                    <svg class="arrow-and-circle__circle"
-                         xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                         viewBox="0 0 500 500">
-                        <defs>
-                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
-                                  id="textcircle">
-                                <animateTransform
-                                        attributeName="transform"
-                                        begin="0s"
-                                        dur="30s"
-                                        type="rotate"
-                                        from="0 250 250"
-                                        to="360 250 250"
-                                        repeatCount="indefinite"
-                                />
-                            </path>
-                        </defs>
-                        <text dy="50" textLength="1220">
-                            <textPath xlink:href="#textcircle">
-                                scroll sideways to navigate •
-                            </textPath>
-                        </text>
-                    </svg>
-                    <div class="ourwork__view">
-                        <svg class="ourwork__icon">
-                            <use class="ourwork__icon-href" xlink:href="./img/sprite.svg#see-more"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img2.png" alt="work">
-                </div>
-                <div class="ourwork__item-text">
-                    <div class="ourwork__item-description">
-                        <div class="ourwork__item-description-block">
+                        <div class="ourwork__item-description-block1">
                             <p class="ourwork__item-description-item1">04</p>
                             <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item2">Collage</p>
+                            <p class="ourwork__item-description-item2">JMJ</p>
                             <p class="ourwork__item-description-item-dot">•</p>
                         </div>
-                        <div class="ourwork__item-description-block">
-                            <p class="ourwork__item-description-item3">Mobile App</p>
+                        <div class="ourwork__item-description-block2">
+                            <p class="ourwork__item-description-item-dot ourwork__item-description-item-dot-show">•</p>
+                            <p class="ourwork__item-description-item3">Website</p>
                             <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item3">E-Commerce</p>
+                            <p class="ourwork__item-description-item3">Corporate</p>
                             <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item3">Fashion</p>
                         </div>
                     </div>
 
@@ -807,7 +798,7 @@
                 </div>
             </div>
             <div class="ourwork__item-content">
-                <p class="ourwork__item-content-title">Analytics & Management<br>Tool for High Schools</p>
+                <p class="ourwork__item-content-title">Redesign of the Qatar<br>Biggest holding Website</p>
                 <div class="ourwork__item-detailed-description">
                     <div class="ourwork__item-summary">
                         <p class="ourwork__item-summary-title">Project Summary</p>
@@ -818,9 +809,9 @@
                                 <p class="ourwork__item-summary-description-item">Project timing:</p>
                             </div>
                             <div class="ourwork__item-summary-info">
-                                <p class="ourwork__item-summary-info-item">Daytona Beach, FL, USA</p>
-                                <p class="ourwork__item-summary-info-item">7,000,000 QAR </p>
-                                <p class="ourwork__item-summary-info-item">2 years</p>
+                                <p class="ourwork__item-summary-info-item">Qatar, Doha</p>
+                                <p class="ourwork__item-summary-info-item">25 000 QAR </p>
+                                <p class="ourwork__item-summary-info-item">3 months</p>
                             </div>
                         </div>
                     </div>
@@ -828,21 +819,12 @@
                         <p class="ourwork__item-features-title">Features</p>
                         <div class="ourwork__item-features-blocks">
                             <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Smart “Get Started” guiding system</p>
-                                <p class="ourwork__item-features-block-item">• Role oriented dashboard </p>
-                                <p class="ourwork__item-features-block-item">• Articles publishing tools</p>
-                                <p class="ourwork__item-features-block-item">• Games coverage tools</p>
+                                <p class="ourwork__item-features-block-item">• Improved logic</p>
+                                <p class="ourwork__item-features-block-item">• Complete redesign that fits marketing  and business strategy</p>
+                                <p class="ourwork__item-features-block-item">• Website CMS</p>
                             </div>
                             <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Smart notifications system</p>
-                                <p class="ourwork__item-features-block-item">• Ability to add or hide analytics</p>
-                                <p class="ourwork__item-features-block-item">• Meeting scheduling functionality</p>
-                                <p class="ourwork__item-features-block-item">• Calendar with extended functionality</p>
-                            </div>
-                            <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Events & meetings management tools</p>
-                                <p class="ourwork__item-features-block-item">• Tasks & reminders functionality</p>
-                                <p class="ourwork__item-features-block-item">• A summary of all team statuses</p>
+                                <p class="ourwork__item-features-block-item">• EDUS unites students, teachers, parents and school leaders around the learning environment in a single, convenient and safe platform. It’s easy to plug, configure and use. Anywhere, anytime.</p>
                             </div>
                         </div>
                     </div>
@@ -876,8 +858,8 @@
                             </path>
                         </defs>
                         <text dy="50" textLength="1220">
-                            <textPath xlink:href="#textcircle">
-                                scroll sideways to navigate •
+                            <textPath class="ourwork__icon-text" xlink:href="#textcircle">
+                                click to see more • click to see more •
                             </textPath>
                         </text>
                     </svg>
@@ -888,22 +870,23 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img2.png" alt="work">
+                    <img class="ourwork__item-img" src="./img/work-img5.png" alt="work">
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
-                        <div class="ourwork__item-description-block">
+                        <div class="ourwork__item-description-block1">
                             <p class="ourwork__item-description-item1">05</p>
                             <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item2">Collage</p>
+                            <p class="ourwork__item-description-item2">HS Sports</p>
                             <p class="ourwork__item-description-item-dot">•</p>
                         </div>
-                        <div class="ourwork__item-description-block">
+                        <div class="ourwork__item-description-block2">
+                            <p class="ourwork__item-description-item-dot ourwork__item-description-item-dot-show">•</p>
                             <p class="ourwork__item-description-item3">Mobile App</p>
                             <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item3">E-Commerce</p>
+                            <p class="ourwork__item-description-item3">Sports</p>
                             <p class="ourwork__item-description-item-dot">•</p>
-                            <p class="ourwork__item-description-item3">Fashion</p>
+                            <p class="ourwork__item-description-item3">Statistics</p>
                         </div>
                     </div>
 
@@ -931,9 +914,9 @@
                                 <p class="ourwork__item-summary-description-item">Project timing:</p>
                             </div>
                             <div class="ourwork__item-summary-info">
-                                <p class="ourwork__item-summary-info-item">Daytona Beach, FL, USA</p>
-                                <p class="ourwork__item-summary-info-item">7,000,000 QAR </p>
-                                <p class="ourwork__item-summary-info-item">2 years</p>
+                                <p class="ourwork__item-summary-info-item">USA</p>
+                                <p class="ourwork__item-summary-info-item">98 000 QAR </p>
+                                <p class="ourwork__item-summary-info-item">6 month</p>
                             </div>
                         </div>
                     </div>
@@ -941,21 +924,125 @@
                         <p class="ourwork__item-features-title">Features</p>
                         <div class="ourwork__item-features-blocks">
                             <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Smart “Get Started” guiding system</p>
-                                <p class="ourwork__item-features-block-item">• Role oriented dashboard </p>
-                                <p class="ourwork__item-features-block-item">• Articles publishing tools</p>
-                                <p class="ourwork__item-features-block-item">• Games coverage tools</p>
+                                <p class="ourwork__item-features-block-item">• News - Let’s you see the latest news about your favorite sports, teams and players</p>
+                                <p class="ourwork__item-features-block-item">• Schedules - including info about games that have been played and upcoming games </p>
+                                <p class="ourwork__item-features-block-item">• Player profiles with personal results, bios and metrics</p>
                             </div>
                             <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Smart notifications system</p>
-                                <p class="ourwork__item-features-block-item">• Ability to add or hide analytics</p>
-                                <p class="ourwork__item-features-block-item">• Meeting scheduling functionality</p>
-                                <p class="ourwork__item-features-block-item">• Calendar with extended functionality</p>
+                                <p class="ourwork__item-features-block-item">• Teams’ and Players’ stats</p>
+                                <p class="ourwork__item-features-block-item">• Game results updated in real time (where applicable)</p>
+                                <p class="ourwork__item-features-block-item">• Team pages including team news, schedules, rosters, galleries and general info</p>
                             </div>
                             <div class="ourwork__item-features-block">
-                                <p class="ourwork__item-features-block-item">• Events & meetings management tools</p>
-                                <p class="ourwork__item-features-block-item">• Tasks & reminders functionality</p>
-                                <p class="ourwork__item-features-block-item">• A summary of all team statuses</p>
+                                <p class="ourwork__item-features-block-item">• Ability to capture and post photos or videos right to the HS Sports app</p>
+                                <p class="ourwork__item-features-block-item">• Favorites - personalised feed of the teams and players</p>
+                                <p class="ourwork__item-features-block-item">• Personal User account to manage personal app settings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="ourwork__item-rights">
+                    All Rights Reserved by the Author. Copyright law prohibits the copying or<br>
+                    publication of any work which does not have the owner's permission.
+                </p>
+            </div>
+            <div class="ourwork__decor-line"></div>
+        </div>
+        <div class="ourwork__item">
+            <div class="ourwork__item-trigger">
+                <div class="ourwork__item-circle">
+                    <svg class="arrow-and-circle__circle"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 500 500">
+                        <defs>
+                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                                  id="textcircle">
+                                <animateTransform
+                                        attributeName="transform"
+                                        begin="0s"
+                                        dur="30s"
+                                        type="rotate"
+                                        from="0 250 250"
+                                        to="360 250 250"
+                                        repeatCount="indefinite"
+                                />
+                            </path>
+                        </defs>
+                        <text dy="50" textLength="1220">
+                            <textPath class="ourwork__icon-text" xlink:href="#textcircle">
+                                click to see more • click to see more •
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="ourwork__view">
+                        <svg class="ourwork__icon">
+                            <use class="ourwork__icon-href" xlink:href="./img/sprite.svg#see-more"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ourwork__item-img-wrapper">
+                    <img class="ourwork__item-img" src="./img/work-img6.png" alt="work">
+                </div>
+                <div class="ourwork__item-text">
+                    <div class="ourwork__item-description">
+                        <div class="ourwork__item-description-block1">
+                            <p class="ourwork__item-description-item1">06</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
+                            <p class="ourwork__item-description-item2">SideFit</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
+                        </div>
+                        <div class="ourwork__item-description-block2">
+                            <p class="ourwork__item-description-item-dot ourwork__item-description-item-dot-show">•</p>
+                            <p class="ourwork__item-description-item3">Mobile App</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
+                            <p class="ourwork__item-description-item3">Sports</p>
+                            <p class="ourwork__item-description-item-dot">•</p>
+                            <p class="ourwork__item-description-item3">Health</p>
+                        </div>
+                    </div>
+
+                    <div class="ourwork__item-link">
+                        <a class="ourwork__item-a" href="#!">
+                            Link To Product
+                        </a>
+                        <a class="ourwork__item-a-svg" href="#!">
+                            <svg class="ourwork__item-svg">
+                                <use xlink:href="./img/sprite.svg#link"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ourwork__item-content">
+                <p class="ourwork__item-content-title">Activities & Sports<br>application</p>
+                <div class="ourwork__item-detailed-description">
+                    <div class="ourwork__item-summary">
+                        <p class="ourwork__item-summary-title">Project Summary</p>
+                        <div class="ourwork__item-summary-blocks">
+                            <div class="ourwork__item-summary-description">
+                                <p class="ourwork__item-summary-description-item">Location:</p>
+                                <p class="ourwork__item-summary-description-item">Product budget:</p>
+                                <p class="ourwork__item-summary-description-item">Project timing:</p>
+                            </div>
+                            <div class="ourwork__item-summary-info">
+                                <p class="ourwork__item-summary-info-item">USA</p>
+                                <p class="ourwork__item-summary-info-item">98 000 QAR </p>
+                                <p class="ourwork__item-summary-info-item">6 month</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ourwork__item-features">
+                        <p class="ourwork__item-features-title">Features</p>
+                        <div class="ourwork__item-features-blocks">
+                            <div class="ourwork__item-features-block">
+                                <p class="ourwork__item-features-block-item">• An all inclusive app for individuals who are looking to try a new hobby or excel in an existing one with like-minded people </p>
+                                <p class="ourwork__item-features-block-item">• Custom messenger </p>
+                            </div>
+                            <div class="ourwork__item-features-block">
+                                <p class="ourwork__item-features-block-item">• Designed and developed a fitness app for iOS devices for the fitness club.</p>
+                                <p class="ourwork__item-features-block-item">• Native iOS on Swift</p>
+                                <p class="ourwork__item-features-block-item">• Firebase backend</p>
                             </div>
                         </div>
                     </div>
@@ -988,7 +1075,7 @@
     <div class="whyus__block1">
         <div class="whyus__wrapper">
             <h2 class="whyus__h2">
-                We Successfully<br>help businesses in<br>growing<br>
+                We Successfully<br>Help Businesses In<br>Growing<br>
                 <span class="whyus__h2-span">Significantly,</span><br>
                 <span class="whyus__h2-span">Profitably,</span> And<br>
                 <span class="whyus__h2-span">Intelligently</span><br>
@@ -1032,7 +1119,7 @@
     <div class="address__wrapper">
         <div class="address__content">
             <div class="address__text">
-                <h2 class="address__text-h2">Visit Our<br>Office</h2>
+                <h2 class="address__text-h2">Visit Our Office</h2>
                 <p class="address__text-p1">HQ Address</p>
                 <p class="address__text-p2">Marina Twin Towers 303,<br>27th floor, office 1,<br>Lusail, Qatar</p>
                 <p class="address__text-p3">Contact Us</p>
@@ -1058,7 +1145,7 @@
                             </path>
                         </defs>
                         <text dy="50" textLength="1220">
-                            <textPath xlink:href="#textcircle">
+                            <textPath class="circle-text" xlink:href="#textcircle">
                                 scroll sideways to navigate •
                             </textPath>
                         </text>
@@ -1075,6 +1162,7 @@
         </iframe>
     </div>
     <img class="address__img" src="./img/svg/figures.svg" alt="">
+    <img class="address__img-mobile" src="./img/svg/figures-mobile.svg" alt="">
 </section>
 <section class="ticker ticker-wrapper">
     <div class="ticker-wrapper__first-half">
@@ -1109,14 +1197,14 @@
                 </ul>
             </nav>
             <div class="footer__social">
-                <a class="header__right-svg-link" href="https://www.facebook.com/cics2021">
-                    <svg class="icon">
-                        <use xlink:href="./img/sprite.svg#facebook"></use>
-                    </svg>
-                </a>
                 <a class="header__right-svg-link" href="https://instagram.com/devswat_?utm_medium=copy_link">
                     <svg class="icon">
                         <use xlink:href="./img/sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+                <a class="header__right-svg-link" href="https://www.facebook.com/cics2021">
+                    <svg class="icon">
+                        <use xlink:href="./img/sprite.svg#facebook"></use>
                     </svg>
                 </a>
             </div>

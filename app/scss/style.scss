@@ -26,6 +26,34 @@
     url('../fonts/roboto-v29-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 
+/* roboto-500 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/roboto-v29-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('../fonts/roboto-v29-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/roboto-v29-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/roboto-v29-latin-500.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/roboto-v29-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/roboto-v29-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-700 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v29-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('../fonts/roboto-v29-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/roboto-v29-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/roboto-v29-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/roboto-v29-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
 /* work-sans-regular - latin */
 @font-face {
     font-family: 'Work Sans';
@@ -38,6 +66,20 @@
     url('../fonts/work-sans-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
     url('../fonts/work-sans-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
     url('../fonts/work-sans-v13-latin-regular.svg#WorkSans') format('svg'); /* Legacy iOS */
+}
+
+/* work-sans-500 - latin */
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/work-sans-v13-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('../fonts/work-sans-v13-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/work-sans-v13-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/work-sans-v13-latin-500.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/work-sans-v13-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/work-sans-v13-latin-500.svg#WorkSans') format('svg'); /* Legacy iOS */
 }
 
 /* work-sans-700 - latin */
@@ -64,6 +106,8 @@ header, section, footer {
     overflow: hidden;
 }
 
+$border-width: 6px;
+
 html {
     scroll-behavior: smooth;
 }
@@ -85,7 +129,7 @@ body.lock {
         width: 525px;
         height: 432px;
         animation: morph 7s linear infinite;
-        border: 6px solid black;
+        border: $border-width solid black;
         position: absolute;
         z-index: -1;
     }
@@ -95,7 +139,7 @@ body.lock {
         width: 425px;
         height: 542px;
         animation: morph 6s linear infinite;
-        border: 6px solid black;
+        border: $border-width solid black;
         position: absolute;
         z-index: -2;
         top: -90px;
@@ -107,7 +151,7 @@ body.lock {
         width: 525px;
         height: 452px;
         animation: morph2 8s linear infinite;
-        border: 6px solid black;
+        border: $border-width solid black;
         position: absolute;
         z-index: -3;
         top: -40px;
@@ -119,7 +163,7 @@ body.lock {
         width: 425px;
         height: 562px;
         animation: morph 7s linear infinite;
-        border: 6px solid black;
+        border: $border-width solid black;
         position: absolute;
         z-index: -4;
         top: -10px;
@@ -131,7 +175,7 @@ body.lock {
         width: 525px;
         height: 472px;
         animation: morph2 9s linear infinite;
-        border: 6px solid black;
+        border: $border-width solid black;
         position: absolute;
         z-index: -5;
         top: 120px;
@@ -265,7 +309,6 @@ body.lock {
 
 
 // burger @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 .burger {
     position: absolute;
     top: 0;
@@ -275,10 +318,6 @@ body.lock {
     &__intro {
         top: 20px;
         right: 20px;
-    }
-
-    &__small-header {
-        top: 33px;
     }
 
     &__button {
@@ -334,7 +373,16 @@ body.lock {
         }
     }
 }
-
+.burger__fixed {
+    position: fixed;
+    top: -40px;
+    right: 80px;
+    z-index: 11;
+    transition: .3s;
+    &.active {
+        top: 40px;
+    }
+}
 // burger end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 // icons @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -413,7 +461,7 @@ body.lock {
         width: 40%;
         height: 100%;
         box-sizing: border-box;
-        border: 6px solid black;
+        border: $border-width solid black;
         border-left: none;
         display: flex;
         flex-direction: column;
@@ -441,8 +489,8 @@ body.lock {
         }
 
         &-block1 {
-            border-left: 6px solid black;
-            border-bottom: 6px solid black;
+            border-left: $border-width solid black;
+            border-bottom: $border-width solid black;
             flex-grow: 5;
             display: flex;
             flex-direction: column;
@@ -451,8 +499,8 @@ body.lock {
         }
 
         &-block2 {
-            border-left: 6px solid black;
-            border-bottom: 6px solid black;
+            border-left: $border-width solid black;
+            border-bottom: $border-width solid black;
             flex-grow: 2.5;
             display: flex;
             justify-content: center;
@@ -460,7 +508,7 @@ body.lock {
         }
 
         &-block3 {
-            border-left: 6px solid black;
+            border-left: $border-width solid black;
             flex-grow: 4.5;
             display: flex;
             justify-content: center;
@@ -472,7 +520,7 @@ body.lock {
         width: 60%;
         height: 100%;
         box-sizing: border-box;
-        border: 6px solid black;
+        border: $border-width solid black;
         border-right: none;
         display: flex;
         flex-direction: column;
@@ -534,8 +582,8 @@ body.lock {
             max-width: 359px;
             max-height: 116px;
             position: absolute;
-            top: -30px;
-            left: -25px;
+            top: -25px;
+            left: 5px;
 
         }
 
@@ -585,19 +633,19 @@ body.lock {
 
     // content end !!!!!!!!!!!!!!!!!!!!!!!!!!!
     &__block1 {
-        border: 6px solid black;
+        border: $border-width solid black;
         border-right: none;
         z-index: -10;
     }
 
     &__block2 {
-        border: 6px solid black;
+        border: $border-width solid black;
         border-right: none;
         z-index: -10;
     }
 
     &__block3 {
-        border: 6px solid black;
+        border: $border-width solid black;
         z-index: -10;
     }
 }
@@ -607,7 +655,10 @@ body.lock {
 // small header @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .small-header {
-    border: 6px solid black;
+    &.hide {
+        display: none;
+    }
+    border: $border-width solid black;
     height: 98px;
     position: fixed;
     top: -110px;
@@ -621,10 +672,6 @@ body.lock {
         top: 0;
     }
 
-    &__nav.hide {
-        display: none;
-    }
-
     &__wrapper {
         margin: auto;
         max-width: 1248px;
@@ -633,15 +680,16 @@ body.lock {
     &__content {
         display: flex;
         align-items: center;
-        padding-top: 29px;
         position: relative;
         margin-left: 20px;
         margin-right: 20px;
+        margin-top: 30px;
     }
 
     &__logo {
         width: 172px;
         margin-right: 307px;
+
     }
 
     &__ul {
@@ -658,10 +706,6 @@ body.lock {
         line-height: 120%;
         text-decoration: none;
         color: black;
-    }
-
-    &__burger {
-        top: 29px;
     }
 }
 
@@ -760,12 +804,12 @@ body.lock {
 
         &-1 {
             max-width: 710px;
-            border: 6px solid black;
+            border: $border-width solid black;
         }
 
         &-2 {
             max-width: 500px;
-            border: 6px solid black;
+            border: $border-width solid black;
             border-left: none;
         }
     }
@@ -821,7 +865,7 @@ body.lock {
         grid-template-columns: 10fr 0.8fr;
 
         &-block1 {
-            border-left: 6px solid black;
+            border-left: $border-width solid black;
             display: flex;
             justify-content: space-between;
 
@@ -831,13 +875,13 @@ body.lock {
         }
 
         &-block2 {
-            border: 6px solid black;
+            border: $border-width solid black;
             border-bottom: none;
             border-top: none;
         }
 
         &-block3 {
-            border: 6px solid black;
+            border: $border-width solid black;
             background-color: black;
             grid-column-start: 1;
             grid-column-end: 4;
@@ -854,7 +898,9 @@ body.lock {
     overflow: hidden;
     height: 145px;
     position: relative;
-    border: 6px solid black;
+    border: $border-width solid black;
+    border-right: none;
+    border-left: none;
     background-color: white;
     z-index: 1;
 
@@ -910,15 +956,19 @@ body.lock {
 .ticker2 {
     background-color: black;
     color: white;
-    border-right: 6px solid black;
-    border-left: 6px solid black;
+    border-right: $border-width solid black;
+    border-left: $border-width solid black;
     border-top: 6px solid white;
     border-bottom: 6px solid white;
+    border-right: none;
+    border-left: none;
 }
 
 .ticker3 {
     background-color: #FFD800;
     border-top: none;
+    border-right: none;
+    border-left: none;
 }
 
 // ticker end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -953,19 +1003,19 @@ body.lock {
         grid-template-columns: 10fr 0.8fr;
 
         &-block1 {
-            border-left: 6px solid black;
+            border-left: $border-width solid black;
             position: relative;
         }
 
         &-block2 {
-            border: 6px solid black;
+            border: $border-width solid black;
             border-bottom: none;
             border-top: none;
         }
 
         &-block3 {
-            border-left: 6px solid black;
-            border-right: 6px solid black;
+            border-left: $border-width solid black;
+            border-right: $border-width solid black;
             background-color: #FFD800;
             grid-column-start: 1;
             grid-column-end: 4;
@@ -1122,6 +1172,7 @@ body.lock {
             font-weight: normal;
             font-size: 64px;
             line-height: 125%;
+            margin-bottom: 25px;
         }
 
         &-p {
@@ -1141,7 +1192,7 @@ body.lock {
         line-height: 120%;
         color: white;
         text-align: center;
-        margin-top: 25px;
+        margin-top: 52px;
         padding-bottom: 254px;
     }
 
@@ -1151,13 +1202,18 @@ body.lock {
 
         &-img-wrapper {
             width: 1248px;
-            height: 617px;
+            height: 659px;
             overflow: hidden;
             transition: .4s;
 
             &.active {
                 height: 417px;
             }
+        }
+        &-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
 
         &-trigger {
@@ -1191,22 +1247,19 @@ body.lock {
             margin-top: 32px;
             align-items: center;
         }
-
-        &-detailed-description {
-            margin-bottom: 69px;
-        }
-
-        &-description-block {
-            display: flex;
-            justify-content: space-between;
-            width: 350px;
-            align-items: center;
-            margin-right: 30px;
-        }
-
         &-description {
             display: flex;
-            justify-content: space-between;
+
+            &-block1 {
+                display: flex;
+                align-items: center;
+            }
+
+            &-block2 {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
 
             &-item1 {
                 font-family: Roboto, sans-serif;
@@ -1215,6 +1268,7 @@ body.lock {
                 font-size: 24px;
                 line-height: 144.5%;
                 color: white;
+                margin-right: 12px;
             }
 
             &-item-dot {
@@ -1224,6 +1278,10 @@ body.lock {
                 font-size: 24px;
                 line-height: 144.5%;
                 color: #858585;
+                margin-right: 12px;
+            }
+            &-item-dot-show {
+                display: none;
             }
 
             &-item2 {
@@ -1233,6 +1291,7 @@ body.lock {
                 font-size: 48px;
                 line-height: 120%;
                 color: white;
+                margin-right: 12px;
             }
 
             &-item3 {
@@ -1242,12 +1301,13 @@ body.lock {
                 font-size: 20px;
                 line-height: 150%;
                 color: #858585;
+                margin-right: 12px;
             }
         }
 
         &-detailed-description {
             display: flex;
-            justify-content: space-between;
+            margin-bottom: 69px;
         }
 
         &-content {
@@ -1265,11 +1325,10 @@ body.lock {
         }
 
         &-summary {
+            margin-right: 100px;
             &-blocks {
-                width: 341px;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
             }
 
             &-title {
@@ -1281,6 +1340,10 @@ body.lock {
                 color: white;
                 margin-bottom: 16px;
             }
+            &-description {
+                margin-right: 50px;
+                min-width: 120px;
+            }
 
             &-description-item {
                 font-family: Roboto, sans-serif;
@@ -1291,6 +1354,9 @@ body.lock {
                 color: white;
             }
 
+            &-info {
+                min-width: 200px;
+            }
             &-info-item {
                 font-family: Roboto, sans-serif;
                 font-style: normal;
@@ -1315,8 +1381,10 @@ body.lock {
             &-blocks {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
-                width: 777px;
+            }
+            &-block {
+                margin-right: 48px;
+                max-width: 260px;
             }
 
             &-block-item {
@@ -1409,13 +1477,13 @@ body.lock {
     }
 
     &__block1 {
-        border: 6px solid black;
+        border: $border-width solid black;
         border-top: none;
         position: relative;
     }
 
     &__block2 {
-        border: 6px solid black;
+        border: $border-width solid black;
         border-left: none;
         border-top: none;
     }
@@ -1511,14 +1579,14 @@ body.lock {
 .map {
     width: 777px;
     height: 628px;
-    border: 6px solid black;
+    border: $border-width solid black;
     margin-top: 100px;
 }
 
 .address {
     width: 100%;
     box-sizing: border-box;
-    border: 6px solid black;
+    border: $border-width solid black;
     border-top: none;
     border-bottom: none;
 
@@ -1531,6 +1599,10 @@ body.lock {
     &__img {
         width: 100%;
         margin-bottom: -5px;
+    }
+    &__img-mobile {
+        width: 100%;
+        display: none;
     }
 
     &__wrapper {
@@ -1551,6 +1623,7 @@ body.lock {
             font-size: 64px;
             line-height: 125%;
             margin-bottom: 64px;
+            width: 300px;
         }
 
         &-p1 {
@@ -1588,8 +1661,8 @@ body.lock {
 
 .footer {
     &__top {
-        border-left: 6px solid black;
-        border-right: 6px solid black;
+        border-left: $border-width solid black;
+        border-right: $border-width solid black;
     }
 
     &__wrapper {
@@ -1638,23 +1711,24 @@ body.lock {
 }
 
 @media (max-width: 1445px) {
+    .burger__fixed {
+        &.active {
+            top: 18px;
+        }
+    }
     .small-header {
         height: 50px;
 
         &__content {
             padding-top: 6px;
-        }
-    }
-    .burger {
-        &__small-header {
-            top: 10px;
+            margin-top: 0;
         }
     }
     .intro {
         grid-template-columns: 6fr 4fr;
 
         &__block2 {
-            border: 6px solid black;
+            border: $border-width solid black;
         }
 
         &__block3 {
@@ -1698,7 +1772,7 @@ body.lock {
             grid-template-columns: 1fr;
 
             &-block1 {
-                border-right: 6px solid black;
+                border-right: $border-width solid black;
                 overflow: hidden;
             }
 
@@ -1716,7 +1790,7 @@ body.lock {
             grid-template-columns: 1fr;
 
             &-block1 {
-                border-right: 6px solid black;
+                border-right: $border-width solid black;
                 overflow: hidden;
             }
 
@@ -1798,7 +1872,7 @@ body.lock {
         }
 
         &__blocks-block1-left {
-            margin-left: 20px;
+            margin-left: 29px;
         }
     }
     .ourwork {
@@ -1846,6 +1920,9 @@ body.lock {
 }
 
 @media (max-width: 1150px) {
+    .burger__fixed {
+        right: 60px;
+    }
     .small-header {
         &__logo {
             margin-right: 100px;
@@ -1910,14 +1987,14 @@ body.lock {
             width: 15px;
             height: 3px;
             top: 5px;
-            right: -5px;
+            right: -4px;
         }
 
         &__arrow div::after {
             width: 15px;
             height: 3px;
             top: -5px;
-            right: -5px;
+            right: -4px;
         }
     }
     .intro {
@@ -1950,20 +2027,20 @@ body.lock {
         &__blob1 {
             width: 425px;
             height: 332px;
-            border: 4px solid black;
+            border: $border-width solid black;
         }
 
         &__blob2 {
             width: 325px;
             height: 442px;
-            border: 4px solid black;
+            border: $border-width solid black;
             top: -40px;
         }
 
         &__blob3 {
             width: 425px;
             height: 352px;
-            border: 4px solid black;
+            border: $border-width solid black;
             top: -10px;
             left: 40px;
         }
@@ -1971,7 +2048,7 @@ body.lock {
         &__blob4 {
             width: 325px;
             height: 462px;
-            border: 4px solid black;
+            border: $border-width solid black;
             top: -30px;
             left: 120px;
         }
@@ -1979,7 +2056,7 @@ body.lock {
         &__blob5 {
             width: 425px;
             height: 372px;
-            border: 4px solid black;
+            border: $border-width solid black;
             top: 20px;
             left: 50px;
         }
@@ -2084,15 +2161,10 @@ body.lock {
         &__position {
             font-size: 17px;
         }
-
-        &__icon {
-            width: 30px;
-            height: 30px;
-        }
     }
     .ticker {
         height: 70px;
-        border: 4px solid black;
+        border: $border-width solid black;
 
         div {
             p {
@@ -2103,8 +2175,8 @@ body.lock {
     .ticker2 {
         background-color: black;
         color: white;
-        border-right: 4px solid black;
-        border-left: 4px solid black;
+        border-right: $border-width solid black;
+        border-left: $border-width solid black;
         border-top: 4px solid white;
         border-bottom: 4px solid white;
     }
@@ -2223,10 +2295,6 @@ body.lock {
                 height: 16px;
             }
 
-            &-description-block {
-                width: 250px;
-            }
-
             &-description {
 
                 &-item1 {
@@ -2318,6 +2386,9 @@ body.lock {
         }
     }
     .address {
+        &__arrow-and-circle {
+            width: 133px;
+        }
 
         &__text {
             &-h2 {
@@ -2389,6 +2460,9 @@ body.lock {
 }
 
 @media (max-width: 830px) {
+    .burger__fixed {
+        right: 40px;
+    }
     .map {
         width: 500px;
         height: 350px;
@@ -2433,6 +2507,8 @@ body.lock {
         &__item {
             &-svg {
                 margin-left: 20px;
+                width: 19px;
+                height: 19px;
             }
 
             &-features {
@@ -2449,6 +2525,178 @@ body.lock {
 
 @media (max-width: 770px) {
 
+    // change borders !!!
+
+    $border-width: 3.75px;
+
+    .whyus__decor-line {
+        height: 3px;
+    }
+
+    .about__text-decor {
+        height: $border-width;
+    }
+    .services__decor {
+        height: 3px;
+        width: 214px;
+        margin-bottom: 60px;
+    }
+
+    .footer {
+        &__top {
+            border: none;
+        }
+    }
+
+    .map {
+        border: $border-width solid black;
+    }
+    .ticker {
+        border: $border-width solid black;
+        border-right: none;
+        border-left: none;
+    }
+    .ticker2 {
+        border: $border-width solid white;
+        border-right: none;
+        border-left: none;
+    }
+    .whyus {
+        &__block1 {
+            border: none;
+        }
+
+        &__block2 {
+            border: $border-width solid black;
+        }
+    }
+
+    .services {
+
+        &__blocks {
+
+            &-block1 {
+                border-right: none;
+                border-left: none;
+            }
+
+            &-block2 {
+                border: $border-width solid black;
+            }
+
+            &-block3 {
+                border-right: none;
+                border-left: none;
+            }
+        }
+    }
+
+    .blobs {
+
+        &__blob1 {
+            border: $border-width solid black;
+        }
+
+        &__blob2 {
+            border: $border-width solid black;
+        }
+
+        &__blob3 {
+            border: $border-width solid black;
+        }
+
+        &__blob4 {
+            border: $border-width solid black;
+        }
+
+        &__blob5 {
+            border: $border-width solid black;
+        }
+    }
+    .header {
+
+        &__right {
+            border: $border-width solid black;
+            border-left: none;
+
+            &-block1 {
+                border-left: $border-width solid black;
+                border-bottom: $border-width solid black;
+            }
+
+            &-block2 {
+                border-left: $border-width solid black;
+                border-bottom: $border-width solid black;
+            }
+
+            &-block3 {
+                border-left: $border-width solid black;
+            }
+        }
+
+        &__left {
+            border: $border-width solid black;
+            border-right: none;
+        }
+    }
+    .intro {
+        &__block1 {
+            border: $border-width solid black;
+            border-right: none;
+            border-left: none;
+        }
+
+        &__block2 {
+            border: $border-width solid black;
+            border-right: none;
+        }
+
+        &__block3 {
+            border: $border-width solid black;
+        }
+    }
+    .small-header {
+        border: $border-width solid black;
+        border-right: none;
+        border-left: none;
+    }
+    .about {
+
+        &__photos {
+            &-1 {
+                border: $border-width solid black;
+            }
+
+            &-2 {
+                border: $border-width solid black;
+            }
+        }
+
+        &__blocks {
+
+            &-block1 {
+                border-left: $border-width solid black;
+                border-right: none;
+                border-left: none;
+            }
+
+            &-block2 {
+                border: $border-width solid black;
+            }
+
+            &-block3 {
+                border: $border-width solid black;
+            }
+        }
+    }
+    .address {
+        border: none;
+    }
+
+
+    // change borders !!!
+
+
     .small-header__ul {
         display: none;
     }
@@ -2461,16 +2709,16 @@ body.lock {
         &__content {
             &-logo {
                 max-width: 190px;
-                margin-left: 17px;
+                margin-left: -5px;
                 margin-top: 30px;
             }
 
             &-h1 {
-                font-size: 40px;
+                font-size: 54px;
             }
 
             &-p {
-                font-size: 16px;
+                font-size: 17px;
             }
 
             &-vertical-links {
@@ -2561,8 +2809,8 @@ body.lock {
         }
     }
     .whatsapp__svg {
-        width: 56px;
-        height: 56px;
+        width: 76px;
+        height: 76px;
     }
     .about {
         &__blocks-block1-right {
@@ -2570,6 +2818,7 @@ body.lock {
         }
 
         &__long-vector {
+            top: -190px;
             width: 100px;
             height: 100px;
         }
@@ -2610,7 +2859,7 @@ body.lock {
                 margin-top: -750px;
                 margin-left: auto;
                 margin-right: auto;
-                border: 5px solid black;
+                border: $border-width solid black;
             }
 
             &-2 {
@@ -2618,7 +2867,7 @@ body.lock {
                 margin-left: auto;
                 margin-right: 40px;
                 margin-top: 200px;
-                border: 5px solid black;
+                border: $border-width solid black;
             }
         }
 
@@ -2657,7 +2906,7 @@ body.lock {
             width: 120px;
             height: 120px;
             top: -20px;
-            right: -10px;
+            right: -60px;
         }
 
         &__vector-arrow {
@@ -2671,13 +2920,6 @@ body.lock {
         &__column1, &__column2 {
             margin-bottom: 60px;
         }
-
-        &__decor {
-            height: 6px;
-            width: 214px;
-            margin-bottom: 60px;
-        }
-
         &__h2 {
             font-size: 40px;
         }
@@ -2703,28 +2945,38 @@ body.lock {
         }
     }
     .ourwork {
-
+        &__item-circle {
+            display: none;
+        }
         &__arrow-and-circle {
             margin-left: 30px;
         }
 
         &__title-text {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
             &-h2 {
                 font-size: 40px;
             }
 
             &-p {
                 font-size: 18px;
+                width: 200px;
+                display: block;
+
             }
         }
 
         &__load-more {
             font-size: 16px;
+            padding-bottom: 72px;
         }
     }
     .whyus {
         &__h2 {
             font-size: 44px;
+            width: 100%;
         }
 
         &__text-block1 {
@@ -2736,6 +2988,10 @@ body.lock {
                 font-size: 18px;
             }
         }
+        &__decor-line {
+            width: 40px;
+            margin-bottom: 28px;
+        }
 
         &__text-block2 {
             width: 400px;
@@ -2743,11 +2999,8 @@ body.lock {
             &-p {
                 font-size: 21px;
                 line-height: 28px;
+                margin-bottom: 28px;
             }
-        }
-
-        &__decor-line {
-            height: 4px;
         }
 
         &__bottom-p {
@@ -2763,7 +3016,7 @@ body.lock {
         }
     }
     .map {
-        width: 95%;
+        width: 85%;
         top: 0;
         right: 0;
         bottom: 0;
@@ -2772,6 +3025,10 @@ body.lock {
     }
     .address {
         position: relative;
+
+        &__arrow-and-circle {
+            width: 100px;
+        }
 
         &__text {
             margin-top: 420px;
@@ -2826,12 +3083,27 @@ body.lock {
 @media (max-width: 640px) {
     .ourwork {
         &__item {
+            &-text {
+                position: relative;
+            }
+            &-link {
+                position: absolute;
+                top: 10px;
+                right: 0;
+            }
             &-description {
                 flex-direction: column;
+                &-item-dot-show {
+                    display: block;
+                }
             }
 
-            &-description-block {
+            &-description-block2 {
+                margin-top: 15px;
                 margin-bottom: 20px;
+            }
+            &-description-item3 {
+                margin-right: 10px;
             }
         }
     }
@@ -2880,21 +3152,25 @@ body.lock {
         }
 
         &__nav {
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
+            margin: 80px auto 62px auto;
             width: 100px;
         }
 
         &__social {
             margin: auto;
             padding-right: 20px;
-            padding-bottom: 30px;
+            padding-bottom: 55px;
         }
     }
 }
 
 @media (max-width: 500px) {
+    .intro {
+        &__content-h1 {
+            max-width: 100px;
+            margin-bottom: 46px;
+        }
+    }
     .whatsapp__pinned {
         bottom: 30px;
         right: 30px;
@@ -2902,10 +3178,25 @@ body.lock {
     .whyus__decor-line-big {
         right: -70px;
     }
-    .services__footer-text {
-        width: 200px;
+    .services {
+        &__footer-text {
+            width: 200px;
+        }
+        &__title {
+            margin-bottom: 40px;
+        }
     }
     .about {
+        &__text1 {
+            margin-bottom: 40px;
+            max-width: 200px;
+        }
+        &__text2 {
+            max-width: 200px;
+        }
+        &__text-decor {
+            margin-bottom: 40px;
+        }
         &__photos {
 
             &-1 {
@@ -2924,18 +3215,15 @@ body.lock {
 }
 
 @media (max-width: 445px) {
-    .map {
-        border: 5px solid black;
-    }
     .intro {
         &__wrapper {
-            margin-right: 10px;
-            margin-left: 10px;
+            margin-right: 29px;
+            margin-left: 29px;
         }
     }
     .about {
         &__long-vector {
-            top: 20px;
+            top: -290px;
         }
         &__figures {
 
@@ -2953,7 +3241,7 @@ body.lock {
         }
 
         &__blocks-block1-left {
-            margin-left: 10px;
+            margin-left: 29px;
         }
         &__h2 {
             margin-top: 120px;
@@ -2963,7 +3251,7 @@ body.lock {
             &-2 {
                 margin-top: 150px;
                 width: 260px;
-                margin-right: 10px;
+                margin-right: 29px;
             }
         }
 
@@ -2976,8 +3264,11 @@ body.lock {
         }
     }
     .whyus {
+        &__text-block1-p2 {
+            width: 200px;
+        }
         &__wrapper {
-            margin-left: 10px;
+            margin-left: 29px;
         }
         &__h2 {
             width: 350px;
@@ -2988,23 +3279,34 @@ body.lock {
         }
 
         &__circle {
-            right: -150px;
-            top: 45%;
+            width: 100px;
+            height: 100px;
+            right: -80px;
+            top: 50%;
         }
 
         &__decor-line-big {
-            right: -100px;
+            top: 55%;
+            right: -20px;
+            width: 95px;
+            height: 10px;
         }
     }
     .ourwork {
         &__item {
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: 29px;
+            margin-right: 29px;
         }
     }
     .address {
         &__text {
-            margin-left: 10px;
+            margin-left: 29px;
+        }
+        &__img {
+            display: none;
+        }
+        &__img-mobile {
+            display: block;
         }
     }
 }
@@ -3012,7 +3314,7 @@ body.lock {
 @media (max-width: 390px) {
     .about {
         &__long-vector {
-            top: 20px;
+            top: -160px;
         }
         &__figures {
 
@@ -3029,9 +3331,6 @@ body.lock {
             }
         }
 
-        &__blocks-block1-left {
-            margin-left: 10px;
-        }
         &__h2 {
             margin-top: 120px;
         }
@@ -3040,7 +3339,7 @@ body.lock {
             &-2 {
                 margin-top: 300px;
                 width: 260px;
-                margin-right: 10px;
+                margin-right: 29px;
             }
         }
 
@@ -3053,10 +3352,6 @@ body.lock {
         }
     }
     .ourwork {
-        &__title-text-p {
-            max-width: 100px;
-            margin-left: 70%;
-        }
         &__item-svg {
             margin-left: 0;
         }
@@ -3075,12 +3370,11 @@ body.lock {
             width: 300px;
         }
         &__circle {
-            top: 50%;
+            top: 60%;
         }
 
         &__decor-line-big {
-            right: -100px;
-            top: 55%;
+            top: 63%;
         }
     }
 }
