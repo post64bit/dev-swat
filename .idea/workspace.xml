@@ -2,65 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b02be677-e680-4b89-b7ba-abfbecdc56e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-500.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-500.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-500.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-500.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/roboto-v29-latin-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/work-sans-v13-latin-500.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/work-sans-v13-latin-500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/work-sans-v13-latin-500.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/work-sans-v13-latin-500.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/work-sans-v13-latin-500.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/svg/figures-mobile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-500.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-500.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-500.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-500.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/roboto-v29-latin-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/work-sans-v13-latin-500.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/work-sans-v13-latin-500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/work-sans-v13-latin-500.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/work-sans-v13-latin-500.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/fonts/work-sans-v13-latin-500.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/svg/figures-mobile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/work-img1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/work-img3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/work-img4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/work-img5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/img/work-img6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/min-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/min-logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/work-img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/work-img2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/svg/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/svg/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/svg/min-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/svg/min-logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/work-img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/work-img2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +74,7 @@
       <workItem from="1637315367489" duration="33641000" />
       <workItem from="1637388506020" duration="25842000" />
       <workItem from="1637573523030" duration="12852000" />
-      <workItem from="1637658809735" duration="23607000" />
+      <workItem from="1637658809735" duration="25547000" />
     </task>
     <servers />
   </component>
