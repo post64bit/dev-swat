@@ -108,6 +108,10 @@ header, section, footer {
 
 $border-width: 6px;
 
+svg {
+    stroke-width: $border-width;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -116,110 +120,137 @@ body.lock {
     overflow: hidden;
 }
 
-// blobs @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// morphs @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.blobs {
+$intensity: 25%;
+
+.morphs {
     position: absolute;
     top: 15%;
     left: 25%;
     z-index: -6;
-
-    &__blob1 {
-        background-color: #FFD800;
-        width: 525px;
+    &__morph {
+        position: absolute;
+        border: $border-width solid black;
+        --atf: ease;
+        filter: url(#goo);
+        width: 432px;
         height: 432px;
-        animation: morph 7s linear infinite;
-        border: $border-width solid black;
-        position: absolute;
-        z-index: -1;
-    }
+        border-radius: calc(50% - (#{$intensity} / 2));
+        will-change: transform;
 
-    &__blob2 {
+        &::before,
+        &::after {
+            --atf: ease-in-out;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: inherit;
+            will-change: transform;
+            animation: top-left 1.3s var(--atf) 1.1s alternate infinite,
+            top-right 1.5s var(--atf) 1.2s alternate infinite,
+            bottom-right 1.7s var(--atf) 1.3s alternate infinite,
+            bottom-left 1.1s var(--atf) 1.4s alternate infinite,
+            spin 2.9s ease-in-out alternate-reverse infinite;
+        }
+
+        &::after {
+            --atf: linear;
+            animation: top-left 1.7s var(--atf) 1.6s alternate infinite,
+            top-right 1.5s var(--atf) 1.7s alternate infinite,
+            bottom-right 1.8s var(--atf) 1.7s alternate infinite,
+            bottom-left 1.6s var(--atf) 1.8s alternate infinite,
+            spin 1.4s ease-in-out alternate infinite;
+        }
+    }
+    &__morph1 {
+        top: 10px;
+        left: 20px;
+        background-color: #FFD800;
+        animation: top-left 1.5s var(--atf) alternate infinite,
+        top-right 1.7s var(--atf) alternate infinite,
+        bottom-right 1.1s var(--atf) alternate infinite,
+        bottom-left 1.3s var(--atf) alternate infinite,
+        spin 4.3s ease-in-out alternate infinite;
+    }
+    &__morph2 {
+        top: -30px;
+        left: 40px;
         background-color: #FA547C;
-        width: 425px;
-        height: 542px;
-        animation: morph 6s linear infinite;
-        border: $border-width solid black;
-        position: absolute;
-        z-index: -2;
-        top: -90px;
-        left: 70px;
+        animation: top-left 1.9s var(--atf) alternate infinite,
+        bottom-right 1.5s var(--atf) alternate infinite,
+        bottom-left 2.6s var(--atf) alternate infinite,
+        spin 5.3s ease-in-out alternate infinite;
     }
-
-    &__blob3 {
-        background-color: #FAA525;
-        width: 525px;
-        height: 452px;
-        animation: morph2 8s linear infinite;
-        border: $border-width solid black;
-        position: absolute;
-        z-index: -3;
-        top: -40px;
-        left: 60px;
-    }
-
-    &__blob4 {
-        background-color: #71C23E;
-        width: 425px;
-        height: 562px;
-        animation: morph 7s linear infinite;
-        border: $border-width solid black;
-        position: absolute;
-        z-index: -4;
+    &__morph3 {
         top: -10px;
-        left: 220px;
+        left: 80px;
+        background-color: #FAA525;
+        animation: top-left 2.5s var(--atf) alternate infinite,
+        top-right 2.7s var(--atf) alternate infinite,
+        bottom-right 2.1s var(--atf) alternate infinite,
+        bottom-left 2.3s var(--atf) alternate infinite,
+        spin 4.3s alternate infinite;
     }
-
-    &__blob5 {
+    &__morph4 {
+        top: 50px;
+        left: 70px;
+        background-color: #71C23E;
+        animation: top-left 3.5s var(--atf) alternate infinite,
+        top-right 3.7s var(--atf) alternate infinite,
+        bottom-right 3.1s var(--atf) alternate infinite,
+        bottom-left 4.3s var(--atf) alternate infinite,
+        spin 4.3s ease-in-out alternate infinite;
+    }
+    &__morph5 {
+        top: 60px;
+        left: 110px;
         background-color: #01A6BC;
-        width: 525px;
-        height: 472px;
-        animation: morph2 9s linear infinite;
-        border: $border-width solid black;
-        position: absolute;
-        z-index: -5;
-        top: 120px;
-        left: 150px;
+        animation: top-left 0.5s var(--atf) alternate infinite,
+        top-right 0.7s var(--atf) alternate infinite,
+        bottom-right 1.1s var(--atf) alternate infinite,
+        bottom-left 1.3s var(--atf) alternate infinite,
+        spin 3.3s ease-in-out alternate infinite;
+    }
+
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(85deg);
     }
 }
 
-@keyframes morph {
-    0%, 100% {
-        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-        transform: translate3d(0, 0, 0) rotateZ(0deg);
-    }
-    34% {
-        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-        transform: translate3d(0, 5px, 0) rotateZ(10deg);
-    }
-    50% {
-        transform: translate3d(0, 0, 0) rotateZ(20deg);
-    }
-    67% {
-        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-        transform: translate3d(0, -3px, 0) rotateZ(30deg);
+@keyframes top-left {
+    to {
+        border-top-left-radius: 50%;
     }
 }
 
-@keyframes morph2 {
-    0%, 100% {
-        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-        transform: translate3d(0, 0, 0) rotateZ(30deg);
-    }
-    34% {
-        transform: translate3d(0, 5px, 0) rotateZ(20deg);
-    }
-    50% {
-        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-        transform: translate3d(0, 0, 0) rotateZ(10deg);
-    }
-    67% {
-        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-        transform: translate3d(0, -3px, 0) rotateZ(0deg);
+@keyframes top-right {
+    to {
+        border-top-right-radius: 50%;
     }
 }
 
-// blobs end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@keyframes bottom-right {
+    to {
+        border-bottom-right-radius: 50%;
+    }
+}
+
+@keyframes bottom-left {
+    to {
+        border-bottom-left-radius: 50%;
+    }
+}
+
+// morphs end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 // arrow-and-circle @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .arrow-and-circle {
@@ -316,7 +347,7 @@ body.lock {
     z-index: 2;
 
     &__intro {
-        top: 20px;
+        top: 9px;
         right: 20px;
     }
 
@@ -375,7 +406,7 @@ body.lock {
 }
 .burger__fixed {
     position: fixed;
-    top: -40px;
+    top: -55px;
     right: 80px;
     z-index: 11;
     transition: .3s;
@@ -561,6 +592,8 @@ body.lock {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 6fr 4fr 0.8fr;
+    position: relative;
+    overflow: hidden;
 
     &__wrapper {
         position: absolute;
@@ -791,61 +824,64 @@ body.lock {
         font-weight: bold;
         font-size: 24px;
         line-height: 150%;
-        margin-bottom: 570px;
+        margin-bottom: 668px;
     }
 
-    &__photos {
+    &__cards {
         display: flex;
-        max-height: 720px;
-        max-width: 1210px;
-        margin-bottom: 110px;
-        margin-left: 12vw;
-        margin-top: -400px;
-
-        &-1 {
-            max-width: 710px;
-            border: $border-width solid black;
-        }
-
-        &-2 {
-            max-width: 500px;
-            border: $border-width solid black;
-            border-left: none;
+        flex-direction: column;
+        margin-top: -480px;
+        &-couple {
+            display: flex;
+            flex-direction: row;
+            margin: auto auto 120px auto;
+            &:last-child {
+                margin-bottom: 332px;
+            }
         }
     }
 
-    &__info {
-        display: flex;
-        padding-left: 17vw;
+    &__card {
+        &-photo-wrapper-first {
+            width: 641px;
+            height: 720px;
+            border: $border-width solid black;
+            margin-right: 40px;
+            margin-bottom: 56px;
+        }
+        &-photo-wrapper-second {
+            width: 550px;
+            height: 720px;
+            border: $border-width solid black;
+            margin-bottom: 56px;
+        }
+        &-photo {
+            width: 100%;
+            height: 100%;
+        }
+        &-info {
+            margin-left: 64px;
+        }
+        &-name {
+            font-family: Work Sans, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 120%;
+            color: white;
+            margin-bottom: 12px;
+        }
+        &-position {
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 144.5%;
+            color: #858585;
+            margin-bottom: 32px;
+        }
     }
 
-    &__info-1 {
-        margin-right: 510px;
-    }
-
-    &__info-2 {
-        margin-bottom: 137px;
-    }
-
-    &__name {
-        font-family: Work Sans, sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 120%;
-        color: white;
-        margin-bottom: 12px;
-    }
-
-    &__position {
-        font-family: Roboto, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 144.5%;
-        color: #858585;
-        margin-bottom: 32px;
-    }
 
     &__icon {
         fill: white;
@@ -894,64 +930,36 @@ body.lock {
 
 // ticker @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.ticker {
-    overflow: hidden;
-    height: 145px;
+.marquee {
     position: relative;
+    width: 100%;
+    height: 145px;
+    overflow-x: hidden;
     border: $border-width solid black;
     border-right: none;
     border-left: none;
-    background-color: white;
-    z-index: 1;
-
-    div {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        transform: translate(100%, 0);
-
-        p {
-            font-family: Abril Fatface, sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 56px;
-            line-height: 125%;
-            white-space: nowrap;
-        }
-
-    }
-
-    $duration: 30s;
-
-    .ticker-wrapper__first-half, .ticker-wrapper__second-half {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        right: 0;
-        animation: ticker $duration infinite linear forwards;
-    }
-
-    .ticker-wrapper__second-half {
-        animation: $duration ticker $duration/2 infinite linear forwards;
-    }
 }
 
-@keyframes ticker {
-    0% {
-        transform: translate(-100%, 0);
-    }
-
-    50% {
-        transform: translate(0, 0);
-    }
-
-    100% {
-        transform: translate(100%, 0);
-    }
+.track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 10s linear infinite;
 }
+.content {
+    font-family: Abril Fatface, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 125%;
+    margin-top: 30px;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
 
 .ticker2 {
     background-color: black;
@@ -1194,6 +1202,7 @@ body.lock {
         text-align: center;
         margin-top: 52px;
         padding-bottom: 254px;
+        opacity: 0;
     }
 
     // item @@@@@@@@@@@
@@ -1214,6 +1223,7 @@ body.lock {
             height: 100%;
             width: 100%;
             object-fit: cover;
+            object-position: 50% 0;
         }
 
         &-trigger {
@@ -1713,7 +1723,7 @@ body.lock {
 @media (max-width: 1445px) {
     .burger__fixed {
         &.active {
-            top: 18px;
+            top: 15px;
         }
     }
     .small-header {
@@ -1746,26 +1756,6 @@ body.lock {
             &-vector {
                 right: 0;
             }
-        }
-
-        &__photos {
-            margin-left: 0;
-
-            &-1 {
-                width: 450px;
-            }
-
-            &-2 {
-                width: 350px;
-            }
-        }
-
-        &__info {
-            padding-left: 5vw;
-        }
-
-        &__info-1 {
-            margin-right: 220px;
         }
 
         &__blocks {
@@ -1867,6 +1857,20 @@ body.lock {
         margin-left: 20px;
     }
     .about {
+        &__cards {
+            margin-top: -360px;
+        }
+        &__card {
+
+            &-photo-wrapper-first {
+                width: 541px;
+                height: 620px;
+            }
+            &-photo-wrapper-second {
+                width: 470px;
+                height: 620px;
+            }
+        }
         &__figures {
             margin-right: -50px;
         }
@@ -2022,48 +2026,19 @@ body.lock {
             }
         }
     }
-    .blobs {
-
-        &__blob1 {
-            width: 425px;
-            height: 332px;
+    .morphs {
+        top: 25%;
+        left: 25%;
+        &__morph {
+            width: 380px;
+            height: 380px;
             border: $border-width solid black;
-        }
-
-        &__blob2 {
-            width: 325px;
-            height: 442px;
-            border: $border-width solid black;
-            top: -40px;
-        }
-
-        &__blob3 {
-            width: 425px;
-            height: 352px;
-            border: $border-width solid black;
-            top: -10px;
-            left: 40px;
-        }
-
-        &__blob4 {
-            width: 325px;
-            height: 462px;
-            border: $border-width solid black;
-            top: -30px;
-            left: 120px;
-        }
-
-        &__blob5 {
-            width: 425px;
-            height: 372px;
-            border: $border-width solid black;
-            top: 20px;
-            left: 50px;
         }
     }
     .whatsapp__svg {
         width: 60px;
         height: 60px;
+        stroke-width: 7px;
     }
     .burger {
         &__button {
@@ -2084,7 +2059,16 @@ body.lock {
         }
     }
     .about {
-
+        &__card {
+            &-photo-wrapper-first {
+                width: 441px;
+                height: 520px;
+            }
+            &-photo-wrapper-second {
+                width: 390px;
+                height: 520px;
+            }
+        }
         &__long-vector {
             width: 200px;
             height: 200px;
@@ -2133,34 +2117,6 @@ body.lock {
             font-size: 19px;
             margin-bottom: 510px;
         }
-
-        &__photos {
-            margin-bottom: 60px;
-
-            &-1 {
-                width: 410px;
-            }
-
-            &-2 {
-                width: 310px;
-            }
-        }
-
-        &__info-1 {
-            margin-right: 150px;
-        }
-
-        &__info-2 {
-            margin-bottom: 107px;
-        }
-
-        &__name {
-            font-size: 22px;
-        }
-
-        &__position {
-            font-size: 17px;
-        }
     }
     .ticker {
         height: 70px;
@@ -2175,10 +2131,10 @@ body.lock {
     .ticker2 {
         background-color: black;
         color: white;
-        border-right: $border-width solid black;
-        border-left: $border-width solid black;
-        border-top: 4px solid white;
-        border-bottom: 4px solid white;
+        border-right: none;
+        border-left: none;
+        border-top: $border-width solid white;
+        border-bottom: $border-width solid white;
     }
     .services {
         &__vector {
@@ -2381,9 +2337,6 @@ body.lock {
             right: 20px;
         }
 
-        &__block1 {
-            border-bottom: none;
-        }
     }
     .address {
         &__arrow-and-circle {
@@ -2445,6 +2398,35 @@ body.lock {
 
         &__logo {
             margin-right: 50px;
+        }
+    }
+    .about {
+        &__cards {
+            margin-top: -240px;
+            &-couple {
+                &:last-child {
+                    margin-bottom: 180px;
+                }
+            }
+        }
+        &__card {
+            &-photo-wrapper-first {
+                width: 341px;
+                height: 420px;
+            }
+            &-photo-wrapper-second {
+                width: 310px;
+                height: 420px;
+            }
+            &-info {
+                margin-left: 34px;
+            }
+            &-name {
+                font-size: 26px;
+            }
+            &-position {
+                font-size: 18px;
+            }
         }
     }
     .footer__ul {
@@ -2529,6 +2511,10 @@ body.lock {
 
     $border-width: 3.75px;
 
+    svg {
+        stroke-width: 5.5px;
+    }
+
     .whyus__decor-line {
         height: 3px;
     }
@@ -2551,10 +2537,14 @@ body.lock {
     .map {
         border: $border-width solid black;
     }
-    .ticker {
+    .marquee {
         border: $border-width solid black;
         border-right: none;
         border-left: none;
+        height: 98px;
+    }
+    .content {
+        margin-top: 10px;
     }
     .ticker2 {
         border: $border-width solid white;
@@ -2562,12 +2552,14 @@ body.lock {
         border-left: none;
     }
     .whyus {
-        &__block1 {
-            border: none;
-        }
 
         &__block2 {
             border: $border-width solid black;
+        }
+        &__block1 {
+            border-right: none;
+            border-left: none;
+            border-bottom: none;
         }
     }
 
@@ -2591,25 +2583,8 @@ body.lock {
         }
     }
 
-    .blobs {
-
-        &__blob1 {
-            border: $border-width solid black;
-        }
-
-        &__blob2 {
-            border: $border-width solid black;
-        }
-
-        &__blob3 {
-            border: $border-width solid black;
-        }
-
-        &__blob4 {
-            border: $border-width solid black;
-        }
-
-        &__blob5 {
+    .morphs {
+        &__morph {
             border: $border-width solid black;
         }
     }
@@ -2661,16 +2636,15 @@ body.lock {
         border-left: none;
     }
     .about {
-
-        &__photos {
-            &-1 {
+        &__card {
+            &-photo-wrapper-first {
                 border: $border-width solid black;
             }
-
-            &-2 {
+            &-photo-wrapper-second {
                 border: $border-width solid black;
             }
         }
+
 
         &__blocks {
 
@@ -2779,38 +2753,16 @@ body.lock {
         width: 37px;
         height: 37px;
     }
-    .blobs {
-        top: 22%;
-        left: 20%;
-
-        &__blob1 {
-            width: 325px;
+    .morphs {
+        &__morph{
+            width: 225px;
             height: 232px;
-        }
-
-        &__blob2 {
-            width: 225px;
-            height: 342px;
-        }
-
-        &__blob3 {
-            width: 325px;
-            height: 252px;
-        }
-
-        &__blob4 {
-            width: 225px;
-            height: 362px;
-        }
-
-        &__blob5 {
-            width: 325px;
-            height: 272px;
         }
     }
     .whatsapp__svg {
         width: 76px;
         height: 76px;
+        stroke-width: 4px;
     }
     .about {
         &__blocks-block1-right {
@@ -2818,7 +2770,7 @@ body.lock {
         }
 
         &__long-vector {
-            top: -190px;
+            top: -380px;
             width: 100px;
             height: 100px;
         }
@@ -2848,45 +2800,42 @@ body.lock {
         }
 
         &__text2 {
-            margin-bottom: 800px;
+            margin-bottom: 380px;
         }
-
-        &__photos {
-            display: block;
-
-            &-1 {
-                display: block;
-                margin-top: -750px;
-                margin-left: auto;
-                margin-right: auto;
-                border: $border-width solid black;
-            }
-
-            &-2 {
-                display: block;
-                margin-left: auto;
-                margin-right: 40px;
-                margin-top: 200px;
-                border: $border-width solid black;
+        &__cards {
+            &-couple {
+                flex-direction: column;
+                margin-bottom: 0;
+                &:last-child {
+                    margin-bottom: 60px;
+                }
             }
         }
-
-        &__info {
-            display: block;
+        &__card {
+            &-photo-wrapper-first {
+                width: 317px;
+                height: 322px;
+                margin-right: 0;
+                align-self: center;
+                margin-bottom: 18px;
+            }
+            &-photo-wrapper-second {
+                width: 317px;
+                height: 322px;
+                align-self: center;
+                margin-bottom: 18px;
+            }
+            &-item {
+                margin-bottom: 88px;
+                display: flex;
+                flex-direction: column;
+            }
+            &-info {
+                margin-left: 10px;
+            }
         }
 
-        &__info-1 {
-            margin-top: -330px;
-            margin-bottom: 550px;
-        }
 
-        &__name-black {
-            color: black;
-        }
-
-        &__icon-black {
-            fill: black;
-        }
     }
     .ticker {
         height: 93px;
@@ -3107,40 +3056,12 @@ body.lock {
 }
 
 @media (max-width: 560px) {
-    .blobs {
+    .morphs {
+        top: 25%;
         left: 10%;
-
-        &__blob1 {
-            width: 225px;
+        &__morph {
+            width: 192px;
             height: 192px;
-        }
-
-        &__blob2 {
-            width: 195px;
-            height: 242px;
-            top: -10px;
-            left: 10px;
-        }
-
-        &__blob3 {
-            width: 225px;
-            height: 192px;
-            top: 10px;
-            left: 10px;
-        }
-
-        &__blob4 {
-            width: 195px;
-            height: 262px;
-            top: -10px;
-            left: 50px;
-        }
-
-        &__blob5 {
-            width: 225px;
-            height: 192px;
-            top: -10px;
-            left: 50px;
         }
     }
     .footer {
@@ -3194,30 +3115,25 @@ body.lock {
         &__text-decor {
             margin-bottom: 40px;
         }
-        &__photos {
-
-            &-1 {
-                width: 90vw;
+    }
+    .ourwork {
+        &__item {
+            &-img-wrapper {
+                width: 100%;
+                height: 210px;
+                &.active {
+                    height: 436px;
+                }
             }
-
-            &-2 {
-                margin-top: 200px;
+            &-img {
+                object-position: 0 0;
             }
         }
 
-        &__info-1 {
-            margin-top: -300px;
-        }
     }
 }
 
 @media (max-width: 445px) {
-    .intro {
-        &__wrapper {
-            margin-right: 29px;
-            margin-left: 29px;
-        }
-    }
     .about {
         &__long-vector {
             top: -290px;
@@ -3242,22 +3158,6 @@ body.lock {
         }
         &__h2 {
             margin-top: 120px;
-        }
-        &__photos {
-
-            &-2 {
-                margin-top: 150px;
-                width: 260px;
-                margin-right: 29px;
-            }
-        }
-
-        &__info-1 {
-            margin-top: -350px;
-            margin-bottom: 550px;
-        }
-        &__info-2 {
-            margin-top: -150px;
         }
     }
     .whyus {
@@ -3311,7 +3211,7 @@ body.lock {
 @media (max-width: 390px) {
     .about {
         &__long-vector {
-            top: -160px;
+            top: -360px;
         }
         &__figures {
 
@@ -3330,22 +3230,6 @@ body.lock {
 
         &__h2 {
             margin-top: 120px;
-        }
-        &__photos {
-
-            &-2 {
-                margin-top: 300px;
-                width: 260px;
-                margin-right: 29px;
-            }
-        }
-
-        &__info-1 {
-            margin-top: -370px;
-            margin-bottom: 590px;
-        }
-        &__info-2 {
-            margin-top: -80px;
         }
     }
     .ourwork {
@@ -3374,5 +3258,52 @@ body.lock {
             top: 63%;
         }
     }
+}
+@media (max-width: 350px) {
+    .about {
+        &__card {
+            &-photo-wrapper-first {
+                width: 287px;
+                height: 292px;
+            }
+            &-photo-wrapper-second {
+                width: 287px;
+                height: 292px;
+            }
+        }
+        &__blocks-block1-left {
+            margin-left: 9px;
+        }
+    }
+    .intro {
+        &__wrapper {
+            margin-left: 9px;
+            margin-right: 9px;
+        }
+        &__wrapper {
+            margin-top: 15px;
+        }
+        &__content-text {
+            margin-top: 110px;
+        }
+    }
+    .whyus {
+        &__wrapper {
+            margin-left: 9px;
+        }
+    }
+    .ourwork {
+        &__item {
+            margin-left: 9px;
+            margin-right: 9px;
+        }
+    }
+    .address {
+        &__text {
+            margin-left: 9px;
+        }
+    }
+
+
 }
 

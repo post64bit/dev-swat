@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevSwat</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -12,7 +21,7 @@
     <a class="whatsapp__link" href="tel:+97474730070">
         <svg class="whatsapp__svg" width="98" height="98" viewBox="0 0 110 110" fill="none"
              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <circle cx="55.1265" cy="55.0551" r="51.8198" stroke="black" stroke-width="6"/>
+            <circle cx="55.1265" cy="55.0551" r="51.8198" stroke="black"/>
             <rect x="5.94629" y="5.87488" width="98" height="98" fill="url(#pattern0)"/>
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -78,6 +87,13 @@
     </div>
 </header>
 <section class="intro" id="intro">
+    <div class="morphs">
+        <div class="morphs__morph morphs__morph5"></div>
+        <div class="morphs__morph morphs__morph4"></div>
+        <div class="morphs__morph morphs__morph3"></div>
+        <div class="morphs__morph morphs__morph2"></div>
+        <div class="morphs__morph morphs__morph1"></div>
+    </div>
     <div class="intro__wrapper">
         <div class="intro__content">
             <div class="intro__content-left">
@@ -120,13 +136,6 @@
                     </div>
                 </a>
             </div>
-            <div class="blobs">
-                <div class="blobs__blob1"></div>
-                <div class="blobs__blob2"></div>
-                <div class="blobs__blob3"></div>
-                <div class="blobs__blob4"></div>
-                <div class="blobs__blob5"></div>
-            </div>
             <div class="intro__content-right">
                 <div class="burger burger__intro">
                     <button class="burger__button">
@@ -143,7 +152,7 @@
                     <a class="whatsapp__link" href="tel:+97474730070">
                         <svg class="whatsapp__svg" width="98" height="98" viewBox="0 0 110 110" fill="none"
                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <circle cx="55.1265" cy="55.0551" r="51.8198" stroke="black" stroke-width="6"/>
+                            <circle cx="55.1265" cy="55.0551" r="51.8198" stroke="black"/>
                             <rect x="5.94629" y="5.87488" width="98" height="98" fill="url(#pattern0)"/>
                             <defs>
                                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -231,47 +240,87 @@
             <svg class="about__long-vector">
                 <use xlink:href="./img/sprite.svg#long-vector"></use>
             </svg>
-            <div class="about__photos">
-                <img class="about__photos-1" src="./img/photo1.png" alt="photo">
-                <img class="about__photos-2" src="./img/photo2.png" alt="photo">
-            </div>
-            <div class="about__info">
-                <div class="about__info-1">
-                    <p class="about__name about__name-black">Louie Nemesh</p>
-                    <p class="about__position">Co-founder. CEO.</p>
-                    <a class="about__link" href="https://www.linkedin.com/company/devswat">
-                        <svg class="about__icon about__icon-black">
-                            <use xlink:href="./img/sprite.svg#linkedin"></use>
-                        </svg>
-                    </a>
+            <div class="about__cards">
+                <div class="about__cards-couple">
+                    <div class="about__card-item">
+                        <div class="about__card-photo-wrapper-first">
+                            <picture>
+                                <source srcset="./img/photo1-mobile.webp" media="(max-width: 770px)">
+                                <img class="about__card-photo" src="./img/photo1.webp" alt="photo">
+                            </picture>
+                        </div>
+                        <div class="about__card-info about__card-info-1">
+                            <p class="about__card-name">Louie Nemesh</p>
+                            <p class="about__card-position">Co-founder. CEO.</p>
+                            <a class="about__card-link" href="https://www.linkedin.com/company/devswat">
+                                <svg class="about__icon">
+                                    <use xlink:href="./img/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about__card-item">
+                        <div class="about__card-photo-wrapper-second">
+                            <picture>
+                                <source srcset="./img/photo2-mobile.webp" media="(max-width: 770px)">
+                                <img class="about__card-photo" src="./img/photo2.webp" alt="photo">
+                            </picture>                        </div>
+                        <div class="about__card-info about__card-info-2">
+                            <p class="about__card-name">Gertruda Fon Narcco</p>
+                            <p class="about__card-position">Co-founder. Product & UX<br>Expert. Visionary.</p>
+                            <a class="about__card-link" href="https://www.linkedin.com/company/devswat">
+                                <svg class="about__icon">
+                                    <use xlink:href="./img/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="about__info-2">
-                    <p class="about__name">Gertruda Fon Narcco</p>
-                    <p class="about__position">Co-founder. Product & UX<br>Expert. Visionary.</p>
-                    <a class="about__link" href="https://www.linkedin.com/company/devswat">
-                        <svg class="about__icon">
-                            <use xlink:href="./img/sprite.svg#linkedin"></use>
-                        </svg>
-                    </a>
+                <div class="about__cards-couple">
+                    <div class="about__card-item">
+                        <div class="about__card-photo-wrapper-first">
+                            <picture>
+                                <source srcset="./img/photo3-mobile.webp" media="(max-width: 770px)">
+                                <img class="about__card-photo" src="./img/photo3.webp" alt="photo">
+                            </picture>                        </div>
+                        <div class="about__card-info about__card-info-3">
+                            <p class="about__card-name">Sheikh Jabor Bin Mansour<br>Al Thani</p>
+                            <p class="about__card-position">Chairman. Head Executive.</p>
+                            <a class="about__card-link" href="https://www.linkedin.com/company/devswat">
+                                <svg class="about__icon">
+                                    <use xlink:href="./img/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about__card-item">
+                        <div class="about__card-photo-wrapper-second">
+                            <picture>
+                                <source srcset="./img/photo4-mobile.webp" media="(max-width: 770px)">
+                                <img class="about__card-photo" src="./img/photo4.webp" alt="photo">
+                            </picture>                        </div>
+                        <div class="about__card-info about__card-info-4">
+                            <p class="about__card-name">Adel Chahine</p>
+                            <p class="about__card-position">Legal Advisor.</p>
+                            <a class="about__card-link" href="https://www.linkedin.com/company/devswat">
+                                <svg class="about__icon">
+                                    <use xlink:href="./img/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="ticker ticker-wrapper">
-    <div class="ticker-wrapper__first-half">
-        <p>
-            •&nbsp;&nbsp;&nbsp;What We do&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Our Services&nbsp;&nbsp;&nbsp;•
-            &nbsp;&nbsp;&nbsp;Custom made Only&nbsp;&nbsp;•&nbsp;&nbsp;What We do&nbsp;&nbsp;•
-        </p>
+<div class="marquee">
+    <div class="track">
+        <div class="content">
+            What We do&ensp;•&ensp;Our Services&ensp;•&ensp;Custom made Only&ensp;•&ensp;What We do&ensp;•&ensp;Our Services&ensp;•&ensp;Custom made Only
+        </div>
     </div>
-    <div class="ticker-wrapper__second-half">
-        <p>
-            •&nbsp;&nbsp;&nbsp;What We do&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Our Services&nbsp;&nbsp;&nbsp;•
-            &nbsp;&nbsp;&nbsp;Custom made Only&nbsp;&nbsp;•&nbsp;&nbsp;What We do&nbsp;&nbsp;•
-        </p>
-    </div>
-</section>
+</div>
 <section class="services" id="services">
     <div class="services__blocks">
         <div class="services__blocks-block1">
@@ -351,20 +400,13 @@
         </div>
     </div>
 </section>
-<section class="ticker ticker-wrapper ticker2">
-    <div class="ticker-wrapper__first-half">
-        <p>
-            •&nbsp;&nbsp;&nbsp;Grow&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Rebrand&nbsp;&nbsp;&nbsp;•
-            &nbsp;&nbsp;&nbsp;Expand&nbsp;&nbsp;•&nbsp;&nbsp;We revise your product.&nbsp;&nbsp;•
-        </p>
+<div class="marquee ticker2">
+    <div class="track">
+        <div class="content">
+            Grow&ensp;•&ensp;Rebrand&ensp;•&ensp;Expand&ensp;•&ensp;We revise your product.&ensp;•&ensp;Grow&ensp;•&ensp;Rebrand&ensp;•&ensp;Expand&ensp;•&ensp;We revise your product.&ensp;•
+        </div>
     </div>
-    <div class="ticker-wrapper__second-half">
-        <p>
-            •&nbsp;&nbsp;&nbsp;Grow&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Rebrand&nbsp;&nbsp;&nbsp;•
-            &nbsp;&nbsp;&nbsp;Expand&nbsp;&nbsp;•&nbsp;&nbsp;We revise your product.&nbsp;&nbsp;•
-        </p>
-    </div>
-</section>
+</div>
 <section class="ourwork" id="ourwork">
     <div class="ourwork__wrapper">
         <div class="ourwork__title">
@@ -438,7 +480,10 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img1.png" alt="work">
+                    <picture>
+                        <source srcset="./img/work-img1-mobile.webp" media="(max-width: 500px)">
+                        <img class="ourwork__item-img" src="./img/work-img1.webp" alt="work">
+                    </picture>
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
@@ -545,7 +590,10 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img2.png" alt="work">
+                    <picture>
+                        <source srcset="./img/work-img2-mobile.webp" media="(max-width: 500px)">
+                        <img class="ourwork__item-img" src="./img/work-img2.webp" alt="work">
+                    </picture>
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
@@ -653,7 +701,10 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img3.png" alt="work">
+                    <picture>
+                        <source srcset="./img/work-img3-mobile.webp" media="(max-width: 500px)">
+                        <img class="ourwork__item-img" src="./img/work-img3.webp" alt="work">
+                    </picture>
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
@@ -766,7 +817,10 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img4.png" alt="work">
+                    <picture>
+                        <source srcset="./img/work-img4-mobile.webp" media="(max-width: 500px)">
+                        <img class="ourwork__item-img" src="./img/work-img4.webp" alt="work">
+                    </picture>
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
@@ -870,7 +924,10 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img5.png" alt="work">
+                    <picture>
+                        <source srcset="./img/work-img5-mobile.webp" media="(max-width: 500px)">
+                        <img class="ourwork__item-img" src="./img/work-img5.webp" alt="work">
+                    </picture>
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
@@ -982,7 +1039,10 @@
                     </div>
                 </div>
                 <div class="ourwork__item-img-wrapper">
-                    <img class="ourwork__item-img" src="./img/work-img6.png" alt="work">
+                    <picture>
+                        <source srcset="./img/work-img6-mobile.webp" media="(max-width: 500px)">
+                        <img class="ourwork__item-img" src="./img/work-img6.webp" alt="work">
+                    </picture>
                 </div>
                 <div class="ourwork__item-text">
                     <div class="ourwork__item-description">
@@ -1057,20 +1117,13 @@
         <p class="ourwork__load-more">Load More Projects •••</p>
     </div>
 </section>
-<section class="ticker ticker-wrapper">
-    <div class="ticker-wrapper__first-half">
-        <p>
-            •&nbsp;&nbsp;&nbsp;Why Us?&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;We increase your profits while reducing your
-            stress.&nbsp;&nbsp;•
-        </p>
+<div class="marquee">
+    <div class="track">
+        <div class="content">
+            Why Us?&ensp;•&ensp;We increase your profits while reducing your stress.&ensp;•&ensp;Why Us?&ensp;•&ensp;We increase your profits while reducing your stress.
+        </div>
     </div>
-    <div class="ticker-wrapper__second-half">
-        <p>
-            •&nbsp;&nbsp;&nbsp;Why Us?&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;We increase your profits while reducing your
-            stress.&nbsp;&nbsp;•
-        </p>
-    </div>
-</section>
+</div>
 <section class="whyus" id="whyus">
     <div class="whyus__block1">
         <div class="whyus__wrapper">
@@ -1105,16 +1158,13 @@
     </div>
     <div class="whyus__block2"></div>
 </section>
-<section class="ticker ticker-wrapper ticker3">
-    <div class="ticker-wrapper__first-half">
-        <p>•&nbsp;&nbsp;Get A quote for your project</p>
-        <p>•&nbsp;&nbsp;Make a first step towards digital revision.</p>
+<div class="marquee ticker3">
+    <div class="track">
+        <div class="content">
+            Get A quote for your project&ensp;•&ensp;Make a first step towards digital revision.&ensp;•&ensp;Get A quote for your project&ensp;•&ensp;Make a first step towards digital revision.&ensp;•
+        </div>
     </div>
-    <div class="ticker-wrapper__second-half">
-        <p>•&nbsp;&nbsp;Get A quote for your project&nbsp;</p>
-        <p>•&nbsp;&nbsp;Make a first step towards digital revision.</p>
-    </div>
-</section>
+</div>
 <section class="address">
     <div class="address__wrapper">
         <div class="address__content">
@@ -1164,16 +1214,13 @@
     <img class="address__img" src="./img/svg/figures.svg" alt="">
     <img class="address__img-mobile" src="./img/svg/figures-mobile.svg" alt="">
 </section>
-<section class="ticker ticker-wrapper">
-    <div class="ticker-wrapper__first-half">
-        <p>•&nbsp;&nbsp;Get A quote for your project</p>
-        <p>•&nbsp;&nbsp;Make a first step towards digital revision.</p>
+<div class="marquee">
+    <div class="track">
+        <div class="content">
+            Get A quote for your project&ensp;•&ensp;Make a first step towards digital revision.&ensp;•&ensp;Get A quote for your project&ensp;•&ensp;Make a first step towards digital revision.&ensp;•
+        </div>
     </div>
-    <div class="ticker-wrapper__second-half">
-        <p>•&nbsp;&nbsp;Get A quote for your project&nbsp;</p>
-        <p>•&nbsp;&nbsp;Make a first step towards digital revision.</p>
-    </div>
-</section>
+</div>
 <footer class="footer">
     <div class="footer__top">
         <div class="footer__wrapper">

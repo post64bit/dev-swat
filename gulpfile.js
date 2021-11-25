@@ -73,7 +73,8 @@ function build() {
         'app/js/script.min.js',
         'app/*.html',
         'app/img/sprite.svg',
-        'app/img/svg'
+        'app/img/svg',
+        'app/favicon/*'
     ], {base: 'app'})
         .pipe(dest('dist'))
 }
