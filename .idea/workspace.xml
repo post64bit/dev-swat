@@ -2,73 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b02be677-e680-4b89-b7ba-abfbecdc56e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/favicon/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/android-chrome-384x384.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/favicon/site.webmanifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/photo1-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/photo1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/photo2-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/photo2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/photo3-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/photo3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/photo4-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/photo4.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img1-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img2-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img3-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img4-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img4.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img5-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img5.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img6-mobile.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/work-img6.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/android-chrome-384x384.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon/site.webmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/photo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/photo2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/whatsapp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/work-img1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/work-img2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/work-img3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/work-img4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/work-img5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/work-img6.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/photo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/photo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/svg/whatsapp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/work-img1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/work-img2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/work-img3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/work-img4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/work-img5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/work-img6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +81,7 @@
       <workItem from="1637658809735" duration="26173000" />
       <workItem from="1637743979124" duration="19000" />
       <workItem from="1637744015677" duration="12471000" />
-      <workItem from="1637831503516" duration="15865000" />
+      <workItem from="1637831503516" duration="24950000" />
     </task>
     <servers />
   </component>

@@ -52,7 +52,7 @@ $(function() {
     let bg1 = document.querySelector('.about__figures-circle')
     let bg2 = document.querySelector('.about__figures-various');
     let bg3 = document.querySelector('.about__figures-vector');
-    let bg4 = document.querySelector('.about__figures-long-vector');
+    let bg4 = document.querySelector('.about__long-vector');
     let bg5 = document.querySelector('.services__vector-arrow');
     let bg6 = document.querySelector('.services__vector');
     let bg7 = document.querySelector('.whyus__decor-line-big');
@@ -64,7 +64,7 @@ $(function() {
         bg1.style.transform = 'translate(-' + x * 80 + 'px, -' + y * 80 + 'px)';
         bg2.style.transform = 'translate(-' + x * 20 + 'px, -' + y * 20 + 'px)';
         bg3.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
-        // bg4.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)'; error!!!
+        bg4.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)';
         bg5.style.transform = 'translate(-' + x * 90 + 'px, -' + y * 90 + 'px)';
         bg6.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
         bg7.style.transform = 'translate(-' + x * 40 + 'px, -' + y * 40 + 'px)';
