@@ -95,6 +95,19 @@
     url('../fonts/work-sans-v13-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
     url('../fonts/work-sans-v13-latin-700.svg#WorkSans') format('svg'); /* Legacy iOS */
 }
+/* pt-mono-regular - latin */
+@font-face {
+    font-family: 'PT Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/pt-mono-v8-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('../fonts/pt-mono-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/pt-mono-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/pt-mono-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/pt-mono-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/pt-mono-v8-latin-regular.svg#PTMono') format('svg'); /* Legacy iOS */
+}
 
 // fonts end @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -468,7 +481,7 @@ $intensity: 25%;
 
     &__li-link {
         color: black;
-        font-family: Andale Mono, sans-serif;
+        font-family: 'PT Mono', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -500,7 +513,7 @@ $intensity: 25%;
 
         &-link {
             color: black;
-            font-family: Andale Mono, sans-serif;
+            font-family: 'PT Mono', sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
@@ -645,7 +658,7 @@ $intensity: 25%;
             margin-top: 40vh;
             position: absolute;
             right: -120px;
-            font-family: Andale Mono, sans-serif;
+            font-family: 'PT Mono', sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
@@ -732,7 +745,7 @@ $intensity: 25%;
     }
 
     &__link {
-        font-family: Andale Mono, sans-serif;
+        font-family: 'PT Mono', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
@@ -1122,7 +1135,7 @@ $intensity: 25%;
     }
 
     &__footer-text2 {
-        font-family: Andale Mono, sans-serif;
+        font-family: 'PT Mono', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
@@ -1217,7 +1230,7 @@ $intensity: 25%;
     }
 
     &__load-more {
-        font-family: Andale Mono, sans-serif;
+        font-family: 'PT Mono', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
@@ -1261,7 +1274,7 @@ $intensity: 25%;
         }
 
         &-a {
-            font-family: Andale Mono, sans-serif;
+            font-family: 'PT Mono', sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
@@ -1432,7 +1445,7 @@ $intensity: 25%;
         }
 
         &-rights {
-            font-family: Andale Mono, sans-serif;
+            font-family: 'PT Mono', sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 13px;
@@ -1679,7 +1692,7 @@ $intensity: 25%;
         }
 
         &-p3 {
-            font-family: Andale Mono, sans-serif;
+            font-family: 'PT Mono', sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
@@ -1726,7 +1739,7 @@ $intensity: 25%;
 
         &-p {
             margin-right: 50px;
-            font-family: Andale Mono, sans-serif;
+            font-family: 'PT Mono', sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
