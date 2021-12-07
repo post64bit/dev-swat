@@ -133,6 +133,13 @@ body.lock {
     overflow: hidden;
 }
 
+#myCanvas {
+    width: 100%;
+    height: 1527px;
+    margin-top: -830px;
+    margin-bottom: -7px;
+}
+
 // morphs @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 $intensity: 25%;
@@ -1632,6 +1639,7 @@ $intensity: 25%;
 
 .address {
     width: 100%;
+    height: 1500px;
     box-sizing: border-box;
     border: $border-width solid black;
     border-top: none;
@@ -1961,6 +1969,10 @@ $intensity: 25%;
 }
 
 @media (max-width: 1150px) {
+    #myCanvas {
+        height: 1513px;
+        margin-top: -665px;
+    }
     .burger__fixed {
         right: 60px;
     }
@@ -2493,6 +2505,14 @@ $intensity: 25%;
 }
 
 @media (max-width: 830px) {
+    #myCanvas {
+        height: 1018px;
+        margin-top: -660px;
+    }
+    .address {
+        height: 1013px;
+    }
+
     .burger__fixed {
         right: 40px;
     }
@@ -2562,7 +2582,13 @@ $intensity: 25%;
 }
 
 @media (max-width: 770px) {
-
+    #myCanvas {
+        height: 1218px;
+        margin-top: -870px;
+    }
+    .address {
+        height: 1213px;
+    }
     // change borders !!!
 
     $border-width: 3.75px;
@@ -3093,6 +3119,12 @@ $intensity: 25%;
 
 
 @media (max-width: 640px) {
+    #myCanvas {
+        height: 1418px;
+    }
+    .address {
+        height: 1413px;
+    }
     .about {
         &__blocks-block1-right {
             margin-right: -300px;
@@ -3309,6 +3341,12 @@ $intensity: 25%;
 }
 
 @media (max-width: 390px) {
+    #myCanvas {
+        height: 1518px;
+    }
+    .address {
+        height: 1513px;
+    }
     .about {
         &__blocks-block1-right {
             margin-right: -350px;
