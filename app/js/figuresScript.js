@@ -167,7 +167,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: 10
+                lineWidth: isMobile ? 6 : 10
             }
         });
     }
@@ -188,7 +188,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: 10
+                lineWidth: isMobile ? 6 : 10
             }
         });
     }
@@ -209,7 +209,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: 10
+                lineWidth: isMobile ? 6 : 10
             }
         });
     }
@@ -228,7 +228,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: 10
+                lineWidth: isMobile ? 6 : 10
             }
         });
     }
@@ -242,7 +242,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: 10
+                lineWidth: isMobile ? 6 : 10
             }
         });
         return circle
@@ -267,7 +267,7 @@ if (typeof fetch !== 'undefined') {
                 render: {
                     fillStyle: color,
                     strokeStyle: 'black',
-                    lineWidth: 10,
+                    lineWidth: isMobile ? 6 : 10
                 }
             }, true));
         });

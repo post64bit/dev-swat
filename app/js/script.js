@@ -70,4 +70,22 @@ $(function() {
         bg7.style.transform = 'translate(-' + x * 40 + 'px, -' + y * 40 + 'px)';
         bg8.style.transform = 'translate(-' + x * 70 + 'px, -' + y * 70 + 'px)';
     });
+
+    $(document).scroll(function() {
+        var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+        if (scrollBottom > 200 && scrollBottom < 1700) {
+            $('.address__arrow').css('opacity', '1');
+        } else {
+            $('.address__arrow').css('opacity', '0');
+        }
+    });
+
+    $( ".address__arrow-top" ).on( "click", function() {
+        $(window).scrollTop($(window).scrollTop() - 170)
+    });
+    $( ".address__arrow-bottom" ).on( "click", function() {
+        $(window).scrollTop($(window).scrollTop() + 170)
+    });
+
+
 });
