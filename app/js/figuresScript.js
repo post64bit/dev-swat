@@ -103,18 +103,20 @@ if (typeof fetch !== 'undefined') {
             .then(function (response) { return response.text(); })
             .then(function (raw) { return (new window.DOMParser()).parseFromString(raw, 'image/svg+xml'); });
     };
-    let isMobile = window.matchMedia('(max-width: 870px)').matches
+    var isMobile = function() {
+        return window.matchMedia('(max-width: 870px)').matches
+    }
 
     //concave 1
     var concaveVector1 = (getInfo) => {
-        if (isMobile && getInfo === 'getFromPath') {
+        if (isMobile() && getInfo === 'getFromPath') {
             return Vertices.fromPath('2.724 2.637, 2.724 133.805, 69.026 73.751, 135.327 133.805, 135.327 2.637, 2.724 2.637')
-        } else if (!isMobile && getInfo === 'getFromPath') {
+        } else if (!isMobile() && getInfo === 'getFromPath') {
             return Vertices.fromPath('204.025 0.528, 204.025 205.419, 108.639 205.419, 108.639 97.756, 0.976 97.756, 0.976 0.528, 204.025 0.528')
         }
-        if (isMobile && getInfo === 'getSvgPath') {
+        if (isMobile() && getInfo === 'getSvgPath') {
             return './img/svg/concave-vector2-mobile.svg'
-        } else if (!isMobile && getInfo === 'getSvgPath') {
+        } else if (!isMobile() && getInfo === 'getSvgPath') {
             return './img/svg/concave-vector2.svg'
         }
     }
@@ -131,14 +133,14 @@ if (typeof fetch !== 'undefined') {
     //concave 2
     var concaveVector2 = (getInfo) => {
 
-        if (isMobile && getInfo === 'getFromPath') {
+        if (isMobile() && getInfo === 'getFromPath') {
             return Vertices.fromPath('135.327 135.804, 135.327 4.637, 69.025 64.690, 2.724 4.637, 2.724 135.804, 135.327 135.804')
-        } else if (!isMobile && getInfo === 'getFromPath') {
+        } else if (!isMobile() && getInfo === 'getFromPath') {
             return Vertices.fromPath('247.009 247.602, 247.009 6.965, 125.374 117.137, 3.738 6.965, 3.738 247.602, 247.009 247.602')
         }
-        if (isMobile && getInfo === 'getSvgPath') {
+        if (isMobile() && getInfo === 'getSvgPath') {
             return './img/svg/concave-vector1-mobile.svg'
-        } else if (!isMobile && getInfo === 'getSvgPath') {
+        } else if (!isMobile() && getInfo === 'getSvgPath') {
             return './img/svg/concave-vector1.svg'
         }
     }
@@ -158,7 +160,7 @@ if (typeof fetch !== 'undefined') {
         var color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
 
         var directVector = () => {
-            if (isMobile) {
+            if (isMobile()) {
                 return Vertices.fromPath('2.138 3.277, 2.138 66.370, 128.325 129.464, 128.325 66.370, 2.138 3.277')
             }
             return Vertices.fromPath('3.852 5.074, 3.852 120.824, 235.352 236.574, 235.352 120.824, 3.852 5.074')
@@ -167,7 +169,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: isMobile ? 6 : 10
+                lineWidth: isMobile() ? 6 : 10
             }
         });
     }
@@ -179,7 +181,7 @@ if (typeof fetch !== 'undefined') {
     function directVectorGenerator2() {
         var color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
         var directVector = () => {
-            if (isMobile) {
+            if (isMobile()) {
                 return Vertices.fromPath('1.950 130.276, 128.137 130.276, 128.137 2.565, 1.950 2.565, 1.950 130.276')
             }
             return Vertices.fromPath('1.352 237.824, 232.852 237.824, 232.852 3.528, 1.352 3.528, 1.352 237.824')
@@ -188,7 +190,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: isMobile ? 6 : 10
+                lineWidth: isMobile() ? 6 : 10
             }
         });
     }
@@ -200,7 +202,7 @@ if (typeof fetch !== 'undefined') {
     function directVectorGenerator3() {
         var color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
         var directVector = () => {
-            if (isMobile) {
+            if (isMobile()) {
                 return Vertices.fromPath('2.325 65.659, 120.328 65.659, 120.328 2.565, 2.325 2.565, 2.325 65.659')
             }
             return Vertices.fromPath('3.352 119.271, 219.836 119.271, 219.836 3.521, 3.352 3.521, 3.352 119.271')
@@ -209,7 +211,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: isMobile ? 6 : 10
+                lineWidth: isMobile() ? 6 : 10
             }
         });
     }
@@ -219,7 +221,7 @@ if (typeof fetch !== 'undefined') {
     function directVectorGenerator4() {
         var color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
         var directVector = () => {
-            if (isMobile) {
+            if (isMobile()) {
                 return Vertices.fromPath('2.521 55.155, 54.277 55.155, 54.277 2.775, 2.521 2.775, 2.521 55.155')
             }
             return Vertices.fromPath('3.738 99.572, 98.687 99.572, 98.687 3.476, 3.738 3.476, 3.738 99.572')
@@ -228,7 +230,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: isMobile ? 6 : 10
+                lineWidth: isMobile() ? 6 : 10
             }
         });
     }
@@ -242,7 +244,7 @@ if (typeof fetch !== 'undefined') {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
-                lineWidth: isMobile ? 6 : 10
+                lineWidth: isMobile() ? 6 : 10
             }
         });
         return circle
@@ -252,12 +254,12 @@ if (typeof fetch !== 'undefined') {
     }
 
     ([
-        (() => isMobile ? './img/svg/vector1-mobile.svg' : './img/svg/vector1.svg')(),
-        (() => isMobile ? './img/svg/vector2-mobile.svg' : './img/svg/vector2.svg')(),
-        (() => isMobile ? './img/svg/vector3-mobile.svg' : './img/svg/vector3.svg')(),
-        (() => isMobile ? './img/svg/vector4-mobile.svg' : './img/svg/vector4.svg')(),
-        (() => isMobile ? './img/svg/vector5-mobile.svg' : './img/svg/vector5.svg')(),
-        (() => isMobile ? './img/svg/vector6-mobile.svg' : './img/svg/vector6.svg')(),
+        (() => isMobile() ? './img/svg/vector1-mobile.svg' : './img/svg/vector1.svg')(),
+        (() => isMobile() ? './img/svg/vector2-mobile.svg' : './img/svg/vector2.svg')(),
+        (() => isMobile() ? './img/svg/vector3-mobile.svg' : './img/svg/vector3.svg')(),
+        (() => isMobile() ? './img/svg/vector4-mobile.svg' : './img/svg/vector4.svg')(),
+        (() => isMobile() ? './img/svg/vector5-mobile.svg' : './img/svg/vector5.svg')(),
+        (() => isMobile() ? './img/svg/vector6-mobile.svg' : './img/svg/vector6.svg')(),
 
     ]).forEach(function (path, i) {
         loadSvg(path).then(function (root) {
@@ -267,7 +269,7 @@ if (typeof fetch !== 'undefined') {
                 render: {
                     fillStyle: color,
                     strokeStyle: 'black',
-                    lineWidth: isMobile ? 6 : 10
+                    lineWidth: isMobile() ? 6 : 10
                 }
             }, true));
         });
