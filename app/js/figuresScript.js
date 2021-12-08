@@ -59,9 +59,6 @@ var render = Render.create({
 
 Render.run(render);
 
-// create runner
-var runner = Runner.create();
-
 // add mouse control
 var mouse = Mouse.create(render.canvas),
     mouseConstraint = MouseConstraint.create(engine, {
@@ -116,9 +113,9 @@ if (typeof fetch !== 'undefined') {
             return Vertices.fromPath('204.025 0.528, 204.025 205.419, 108.639 205.419, 108.639 97.756, 0.976 97.756, 0.976 0.528, 204.025 0.528')
         }
         if (isMobile && getInfo === 'getSvgPath') {
-            return '../img/svg/concave-vector2-mobile.svg'
+            return './img/svg/concave-vector2-mobile.svg'
         } else if (!isMobile && getInfo === 'getSvgPath') {
-            return '../img/svg/concave-vector2.svg'
+            return './img/svg/concave-vector2.svg'
         }
     }
     Composite.add(world, Bodies.fromVertices(Math.abs(Math.floor(Math.random() * (window.innerWidth - 100))), 500, concaveVector1('getFromPath'), {
@@ -140,9 +137,9 @@ if (typeof fetch !== 'undefined') {
             return Vertices.fromPath('247.009 247.602, 247.009 6.965, 125.374 117.137, 3.738 6.965, 3.738 247.602, 247.009 247.602')
         }
         if (isMobile && getInfo === 'getSvgPath') {
-            return '../img/svg/concave-vector1-mobile.svg'
+            return './img/svg/concave-vector1-mobile.svg'
         } else if (!isMobile && getInfo === 'getSvgPath') {
-            return '../img/svg/concave-vector1.svg'
+            return './img/svg/concave-vector1.svg'
         }
     }
 
@@ -255,12 +252,12 @@ if (typeof fetch !== 'undefined') {
     }
 
     ([
-        (() => isMobile ? '../img/svg/vector1-mobile.svg' : '../img/svg/vector1.svg')(),
-        (() => isMobile ? '../img/svg/vector2-mobile.svg' : '../img/svg/vector2.svg')(),
-        (() => isMobile ? '../img/svg/vector3-mobile.svg' : '../img/svg/vector3.svg')(),
-        (() => isMobile ? '../img/svg/vector4-mobile.svg' : '../img/svg/vector4.svg')(),
-        (() => isMobile ? '../img/svg/vector5-mobile.svg' : '../img/svg/vector5.svg')(),
-        (() => isMobile ? '../img/svg/vector6-mobile.svg' : '../img/svg/vector6.svg')(),
+        (() => isMobile ? './img/svg/vector1-mobile.svg' : './img/svg/vector1.svg')(),
+        (() => isMobile ? './img/svg/vector2-mobile.svg' : './img/svg/vector2.svg')(),
+        (() => isMobile ? './img/svg/vector3-mobile.svg' : './img/svg/vector3.svg')(),
+        (() => isMobile ? './img/svg/vector4-mobile.svg' : './img/svg/vector4.svg')(),
+        (() => isMobile ? './img/svg/vector5-mobile.svg' : './img/svg/vector5.svg')(),
+        (() => isMobile ? './img/svg/vector6-mobile.svg' : './img/svg/vector6.svg')(),
 
     ]).forEach(function (path, i) {
         loadSvg(path).then(function (root) {

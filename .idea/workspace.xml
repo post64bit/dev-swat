@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b02be677-e680-4b89-b7ba-abfbecdc56e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/figuresScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/figuresScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/script.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +45,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -80,7 +84,8 @@
       <workItem from="1637831503516" duration="25404000" />
       <workItem from="1637923675707" duration="1328000" />
       <workItem from="1638776428201" duration="13368000" />
-      <workItem from="1638871058660" duration="18837000" />
+      <workItem from="1638871058660" duration="21501000" />
+      <workItem from="1638949853869" duration="997000" />
     </task>
     <servers />
   </component>
