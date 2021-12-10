@@ -108,7 +108,7 @@ $(function () {
         function scrollToTop() {
             if (scrolled < 170) {
                 $(window).scrollTop($(window).scrollTop() - 10)
-                scrolled = scrolled + 10; //100 - скорость прокрутки
+                scrolled = scrolled + 10;
                 timer = setTimeout(scrollToTop, 10);
             } else {
                 clearTimeout(timer);
@@ -118,7 +118,7 @@ $(function () {
         function scrollToBottom() {
             if (scrolled < 170) {
                 $(window).scrollTop($(window).scrollTop() + 10)
-                scrolled = scrolled + 10; //100 - скорость прокрутки
+                scrolled = scrolled + 10;
                 timer = setTimeout(scrollToBottom, 10);
             } else {
                 clearTimeout(timer);
