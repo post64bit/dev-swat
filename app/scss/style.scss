@@ -135,8 +135,8 @@ body.lock {
 
 #myCanvas {
     width: 100%;
-    height: 1527px;
-    margin-top: -830px;
+    height: 101%;
+    margin-top: -750px;
     margin-bottom: -7px;
 }
 
@@ -1645,22 +1645,6 @@ $intensity: 25%;
     border-top: none;
     border-bottom: none;
 
-
-    &__arrow-and-circle {
-        position: static;
-        transform: rotate(180deg);
-        margin-right: calc(100% - 150px);
-    }
-
-    &__img {
-        width: 100%;
-        margin-bottom: -5px;
-    }
-    &__img-mobile {
-        width: 100%;
-        display: none;
-    }
-
     &__wrapper {
         max-width: 1300px;
         margin: auto;
@@ -1669,6 +1653,7 @@ $intensity: 25%;
     }
 
     &__text {
+        position: relative;
         padding-top: 124px;
         margin-bottom: 74px;
 
@@ -1707,6 +1692,11 @@ $intensity: 25%;
             font-size: 18px;
             line-height: 120%;
         }
+    }
+    &__arrow-and-circle {
+        bottom: -250px;
+        transform: rotate(180deg);
+        margin-right: calc(100% - 150px);
     }
 }
 
@@ -1767,6 +1757,10 @@ $intensity: 25%;
 }
 
 @media (max-width: 1445px) {
+    #myCanvas {
+        margin-top: -635px;
+    }
+
     .burger__fixed {
         &.active {
             top: 15px;
@@ -1971,8 +1965,7 @@ $intensity: 25%;
 
 @media (max-width: 1150px) {
     #myCanvas {
-        height: 1513px;
-        margin-top: -665px;
+        margin-top: -540px;
     }
     .burger__fixed {
         right: 60px;
@@ -2402,6 +2395,7 @@ $intensity: 25%;
     .address {
         &__arrow-and-circle {
             width: 133px;
+            bottom: -170px;
         }
 
         &__text {
@@ -2507,8 +2501,7 @@ $intensity: 25%;
 
 @media (max-width: 830px) {
     #myCanvas {
-        height: 1018px;
-        margin-top: -660px;
+        margin-top: -535px;
     }
     .address {
         height: 1013px;
@@ -2584,8 +2577,7 @@ $intensity: 25%;
 
 @media (max-width: 770px) {
     #myCanvas {
-        height: 1218px;
-        margin-top: -870px;
+        margin-top: -770px;
     }
     .address {
         height: 1213px;
@@ -3152,7 +3144,7 @@ $intensity: 25%;
 
 @media (max-width: 640px) {
     #myCanvas {
-        height: 1418px;
+        margin-top: -770px;
     }
     .address {
         height: 1413px;
@@ -3363,21 +3355,15 @@ $intensity: 25%;
         &__text {
             margin-left: 29px;
         }
-        &__img {
-            display: none;
-        }
-        &__img-mobile {
-            display: block;
-        }
     }
 }
 
 @media (max-width: 390px) {
-    #myCanvas {
-        height: 1518px;
-    }
     .address {
         height: 1513px;
+        &__arrow-and-circle {
+            bottom: -140px;
+        }
     }
     .about {
         &__blocks-block1-right {

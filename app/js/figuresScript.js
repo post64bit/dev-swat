@@ -22,26 +22,26 @@ var heightAddressSection = document.getElementById('address').scrollHeight;
 let canvasHeight
 (() => {
     if (window.matchMedia('(max-width: 390px)').matches) {
-        canvasHeight = 1518
+        canvasHeight = 1618
         return
     }
     if (window.matchMedia('(max-width: 640px)').matches) {
-        canvasHeight = 1418
+        canvasHeight = 1518
         return
     }
     if (window.matchMedia('(max-width: 770px)').matches) {
-        canvasHeight = 1218
+        canvasHeight = 1318
         return
     }
     if (window.matchMedia('(max-width: 830px)').matches) {
-        canvasHeight = 1018
+        canvasHeight = 1118
         return
     }
     if (window.matchMedia('(max-width: 1150px)').matches) {
-        canvasHeight = 1510
+        canvasHeight = 1640
         return
     }
-    canvasHeight = 1527
+    canvasHeight = 1600
 })()
 
 // create renderer
