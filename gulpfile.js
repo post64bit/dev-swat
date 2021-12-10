@@ -72,6 +72,8 @@ function build() {
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/js/script.min.js',
+        'app/js/matter.min.js',
+        'app/js/pathseg.min.js',
         'app/*.html',
         'app/img/sprite.svg',
         'app/img/svg',
