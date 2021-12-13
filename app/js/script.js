@@ -1,11 +1,13 @@
 $(function () {
 
+    // open burger
     $('.burger, .header__li-link').on('click', function (e) {
         $('.burger__button, .header').toggleClass('active');
         $('.small-header').toggleClass('hide');
         $('body').toggleClass('lock');
     });
 
+    // open our work item and change svg eye
     $('.ourwork__item-trigger').on('click', function () {
         $(this).next('.ourwork__item-content').slideToggle(400)
         let imgWrapper = $(this).children(".ourwork__item-img-wrapper").toggleClass('active')
@@ -20,6 +22,7 @@ $(function () {
         }
     })
 
+    // change eye text in the top in mobile version
     window.onresize = function (event) {
         let circleText = $('.circle-text')
         if (window.innerWidth < 770) {
@@ -29,11 +32,13 @@ $(function () {
         }
     }
 
+    // rotate element * on scroll
     let star = document.querySelector('.services__icon4')
     window.addEventListener("scroll", function () {
         star.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
     });
 
+    // show and hide header on scroll
     window.onscroll = function showHeader() {
         let header = document.querySelector('.small-header')
         let whatsapp = document.querySelector('.whatsapp__pinned')
@@ -49,6 +54,7 @@ $(function () {
         }
     }
 
+    // parallax by mouse
     let bg1 = document.querySelector('.about__figures-circle')
     let bg2 = document.querySelector('.about__figures-various');
     let bg3 = document.querySelector('.about__figures-vector');
@@ -71,8 +77,9 @@ $(function () {
         bg8.style.transform = 'translate(-' + x * 70 + 'px, -' + y * 70 + 'px)';
     });
 
+    // show and hide arrows on canvas
     $(document).scroll(function () {
-        var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+        let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
         if (scrollBottom > 200 && scrollBottom < 1700) {
             $('.address__arrow').css('opacity', '1');
         } else {
@@ -80,13 +87,15 @@ $(function () {
         }
     });
 
+    // define browser
     function getBrowser() {
-        var aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
+        let aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
             nIdx = aKeys.length - 1;
         for (nIdx; nIdx > -1 && navigator.userAgent.indexOf(aKeys[nIdx]) === -1; nIdx--) ;
         return aKeys[nIdx]
     }
 
+    // if no safari
     if(getBrowser() !== 'Safari') {
         $(".address__arrow-top").on("click", function () {
             $(window).scrollTop($(window).scrollTop() - 170)
@@ -97,10 +106,12 @@ $(function () {
         });
     }
 
+    // if safari
     if (getBrowser() === 'Safari') {
 
-        var scrolled = 0
-        var timer;
+        // smooth scroll by canvas arrows
+        let scrolled = 0
+        let timer;
         $(".address__arrow-top, .address__arrow-bottom").on("click", function(e) {
             if(e.target.className === 'address__arrow-top') scrollToTop();
             if(e.target.className === 'address__arrow-bottom') scrollToBottom();
@@ -126,12 +137,12 @@ $(function () {
             }
         }
 
-
+        // smooth scroll on all page
         (function ($) {
             $.fn.SmoothAnchors = function () {
                 function scrollBodyTo(destination, hash) {
                     // Change the hash first, then do the scrolling. This retains the standard functionality of the back/forward buttons.
-                    var scrollmem = $(document).scrollTop();
+                    let scrollmem = $(document).scrollTop();
                     window.location.hash = hash;
                     $(document).scrollTop(scrollmem);
                     $("html,body").animate({
@@ -141,9 +152,9 @@ $(function () {
 
                 if (typeof $().on == "function") {
                     $(document).on('click', 'a[href^="#"]', function () {
-                        var href = $(this).attr("href");
+                        let href = $(this).attr("href");
                         if ($(href).length == 0) {
-                            var nameSelector = "[name=" + href.replace("#", "") + "]";
+                            let nameSelector = "[name=" + href.replace("#", "") + "]";
 
                             if (href == "#") {
                                 scrollBodyTo(0, href);
@@ -160,11 +171,11 @@ $(function () {
                     });
                 } else {
                     $('a[href^="#"]').click(function () {
-                        var href = $(this).attr("href");
+                        let href = $(this).attr("href");
 
                         if ($(href).length == 0) {
 
-                            var nameSelector = "[name=" + href.replace("#", "") + "]";
+                            let nameSelector = "[name=" + href.replace("#", "") + "]";
 
                             if (href == "#") {
                                 scrollBodyTo(0, href);
