@@ -1,4 +1,4 @@
-let Engine = Matter.Engine,
+var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
     Common = Matter.Common,
@@ -12,14 +12,14 @@ let Engine = Matter.Engine,
 Common.setDecomp;
 
 // create engine
-let engine = Engine.create(),
+var engine = Engine.create(),
     world = engine.world;
 
 
-let heightAddressSection = document.getElementById('address').scrollHeight;
+var heightAddressSection = document.getElementById('address').scrollHeight;
 
 //media queries
-let canvasHeight
+var canvasHeight
 (() => {
     if (window.matchMedia('(max-width: 390px)').matches) {
         canvasHeight = 1618
@@ -45,7 +45,7 @@ let canvasHeight
 })()
 
 // create renderer
-let render = Render.create({
+var render = Render.create({
 
     canvas: document.querySelector('#myCanvas'),
     engine: engine,
@@ -60,7 +60,7 @@ let render = Render.create({
 Render.run(render);
 
 // add mouse control
-let mouse = Mouse.create(render.canvas),
+var mouse = Mouse.create(render.canvas),
     mouseConstraint = MouseConstraint.create(engine, {
         mouse: mouse,
         constraint: {
@@ -80,7 +80,7 @@ Composite.add(world, mouseConstraint);
 render.mouse = mouse;
 
 // create runner
-let runner = Runner.create();
+var runner = Runner.create();
 
 // add bodies
 Composite.add(world, [
@@ -94,21 +94,21 @@ Composite.add(world, [
 // add bodies
 if (typeof fetch !== 'undefined') {
 
-    let select = function (root, selector) {
+    var select = function (root, selector) {
         return Array.prototype.slice.call(root.querySelectorAll(selector));
     };
 
-    let loadSvg = function (url) {
+    var loadSvg = function (url) {
         return fetch(url)
             .then(function (response) { return response.text(); })
             .then(function (raw) { return (new window.DOMParser()).parseFromString(raw, 'image/svg+xml'); });
     };
-    let isMobile = function() {
+    var isMobile = function() {
         return window.matchMedia('(max-width: 870px)').matches
     }
 
     //concave 1
-    let concaveVector1 = (getInfo) => {
+    var concaveVector1 = (getInfo) => {
         if (isMobile() && getInfo === 'getFromPath') {
             return Vertices.fromPath('2.724 2.637, 2.724 133.805, 69.026 73.751, 135.327 133.805, 135.327 2.637, 2.724 2.637')
         } else if (!isMobile() && getInfo === 'getFromPath') {
@@ -131,7 +131,7 @@ if (typeof fetch !== 'undefined') {
     }, true));
 
     //concave 2
-    let concaveVector2 = (getInfo) => {
+    var concaveVector2 = (getInfo) => {
 
         if (isMobile() && getInfo === 'getFromPath') {
             return Vertices.fromPath('135.327 135.804, 135.327 4.637, 69.025 64.690, 2.724 4.637, 2.724 135.804, 135.327 135.804')
@@ -157,9 +157,9 @@ if (typeof fetch !== 'undefined') {
 
     //direct vector 1
     function directVectorGenerator() {
-        let color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
+        var color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
 
-        let directVector = () => {
+        var directVector = () => {
             if (isMobile()) {
                 return Vertices.fromPath('2.138 3.277, 2.138 66.370, 128.325 129.464, 128.325 66.370, 2.138 3.277')
             }
@@ -173,14 +173,14 @@ if (typeof fetch !== 'undefined') {
             }
         });
     }
-    for (let i = 0; i < 3; i++) {
+    for (var i = 0; i < 3; i++) {
         Composite.add(world, directVectorGenerator(), true);
     }
 
     //direct vector 2
     function directVectorGenerator2() {
-        let color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
-        let directVector = () => {
+        var color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
+        var directVector = () => {
             if (isMobile()) {
                 return Vertices.fromPath('1.950 130.276, 128.137 130.276, 128.137 2.565, 1.950 2.565, 1.950 130.276')
             }
@@ -194,14 +194,14 @@ if (typeof fetch !== 'undefined') {
             }
         });
     }
-    for (let i = 0; i < 2; i++) {
+    for (var i = 0; i < 2; i++) {
         Composite.add(world, directVectorGenerator2(), true);
     }
 
     //direct vector 3
     function directVectorGenerator3() {
-        let color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
-        let directVector = () => {
+        var color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
+        var directVector = () => {
             if (isMobile()) {
                 return Vertices.fromPath('2.325 65.659, 120.328 65.659, 120.328 2.565, 2.325 2.565, 2.325 65.659')
             }
@@ -219,8 +219,8 @@ if (typeof fetch !== 'undefined') {
 
     //direct vector 4
     function directVectorGenerator4() {
-        let color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
-        let directVector = () => {
+        var color = ['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7'][Math.floor(Math.random() * 6)]
+        var directVector = () => {
             if (isMobile()) {
                 return Vertices.fromPath('2.521 55.155, 54.277 55.155, 54.277 2.775, 2.521 2.775, 2.521 55.155')
             }
@@ -238,9 +238,9 @@ if (typeof fetch !== 'undefined') {
 
     // circles
     function circleGenerator() {
-        let circleSize = () => window.matchMedia('(max-width: 770px)').matches ? 26 : 36
-        let color = Common.choose(['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7']);
-        let circle = Bodies.circle(Math.abs(Math.floor(Math.random() * (window.innerWidth - 100))), 10, circleSize(), {
+        var circleSize = () => window.matchMedia('(max-width: 770px)').matches ? 26 : 36
+        var color = Common.choose(['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7']);
+        var circle = Bodies.circle(Math.abs(Math.floor(Math.random() * (window.innerWidth - 100))), 10, circleSize(), {
             render: {
                 fillStyle: color,
                 strokeStyle: 'black',
@@ -249,7 +249,7 @@ if (typeof fetch !== 'undefined') {
         });
         return circle
     }
-    for (let i = 0; i < 9; i++) {
+    for (var i = 0; i < 9; i++) {
         Composite.add(world, circleGenerator(), true);
     }
 
@@ -263,8 +263,8 @@ if (typeof fetch !== 'undefined') {
 
     ]).forEach(function (path, i) {
         loadSvg(path).then(function (root) {
-            let vertexSets = select(root, 'path').map(function (path) { return Vertices.scale(Svg.pathToVertices(path, 30), 1, 1); });
-            let color = Common.choose(['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7']);
+            var vertexSets = select(root, 'path').map(function (path) { return Vertices.scale(Svg.pathToVertices(path, 30), 1, 1); });
+            var color = Common.choose(['#FFD800', '#FAA525', '#71C23E', '#01A6BC', '#FA547C', '#C5C6C7']);
             Composite.add(world, Bodies.fromVertices(Math.abs(Math.floor(Math.random() * (window.innerWidth - 100))), 200, vertexSets, {
                 render: {
                     fillStyle: color,
