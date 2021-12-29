@@ -781,7 +781,7 @@ $intensity: 25%;
         width: 275px;
         height: 278px;
         position: absolute;
-        top: 400px;
+        top: 550px;
         right: 200px;
     }
     &__circle2 {
@@ -922,16 +922,26 @@ $intensity: 25%;
             font-size: 32px;
             line-height: 120%;
             color: white;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
         &-position {
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 150%;
+            color: #C5C6C7;
+            margin-bottom: 32px;
+        }
+        &-description {
             font-family: Roboto, sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
             line-height: 144.5%;
             color: #858585;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
+            max-width: 410px;
         }
     }
 
@@ -2120,6 +2130,9 @@ $intensity: 25%;
                 width: 390px;
                 height: 520px;
             }
+            &-description {
+                max-width: 350px;
+            }
         }
         &__long-vector {
             width: 200px;
@@ -2477,6 +2490,9 @@ $intensity: 25%;
             &-photo-wrapper-first {
                 width: 341px;
                 height: 420px;
+            }
+            &-description {
+                max-width: 300px;
             }
             &-photo-wrapper-second {
                 width: 310px;
@@ -2852,7 +2868,7 @@ $intensity: 25%;
         }
 
         &__long-vector {
-            top: 180px;
+            top: 340px;
             width: 100px;
             height: 100px;
         }
