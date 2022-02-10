@@ -804,7 +804,6 @@ $intensity: 25%;
             height: 240px;
             position: absolute;
             left: 30px;
-            transition: all 0.1s ease;
             fill: #01A6BC;
         }
 
@@ -813,7 +812,6 @@ $intensity: 25%;
             height: 630px;
             position: absolute;
             top: -70px;
-            transition: all 0.1s ease;
             z-index: 1;
         }
 
@@ -823,7 +821,6 @@ $intensity: 25%;
             position: absolute;
             right: -150px;
             bottom: 10px;
-            transition: all 0.1s ease;
         }
         &-vector2 {
             width: 241px;
@@ -831,7 +828,6 @@ $intensity: 25%;
             position: absolute;
             right: 50px;
             bottom: 350px;
-            transition: all 0.1s ease;
         }
         &-little-circle {
             width: 63px;
@@ -839,7 +835,6 @@ $intensity: 25%;
             position: absolute;
             right: 30px;
             bottom: -110px;
-            transition: all 0.1s ease;
         }
     }
 
