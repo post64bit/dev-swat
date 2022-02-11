@@ -1718,8 +1718,15 @@ $intensity: 25%;
 
 
 // footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.clutch-widget {
+    margin-left: 20px;
+    margin-top: -6px;
+}
 
 .footer {
+    &__social-media {
+        display: flex;
+    }
     &__top {
         border-left: $border-width solid black;
         border-right: $border-width solid black;
@@ -1739,6 +1746,7 @@ $intensity: 25%;
 
     &__social {
         margin-top: 35px;
+        display: flex;
     }
 
     &__bottom {
@@ -1973,6 +1981,14 @@ $intensity: 25%;
             &-text {
                 margin-left: 20px;
             }
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .footer {
+        &__nav {
+            margin-right: 38px;
         }
     }
 }
@@ -2438,6 +2454,7 @@ $intensity: 25%;
         width: 650px;
         height: 500px;
     }
+
     .footer {
         &__wrapper {
             max-width: 1300px;
@@ -2458,6 +2475,18 @@ $intensity: 25%;
             &-p {
                 font-size: 16px;
             }
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .footer {
+        &__ul {
+            display: block;
+            max-width: 50vw;
+        }
+        &__li {
+            margin-bottom: 15px;
         }
     }
 }
@@ -2505,7 +2534,7 @@ $intensity: 25%;
         }
     }
     .footer__ul {
-        max-width: 520px;
+        max-width: 375px;
     }
 }
 
@@ -3137,7 +3166,7 @@ $intensity: 25%;
         position: relative;
         &__ul {
             display: block;
-            max-width: 50vw;
+            max-width: 34vw;
         }
 
         &__li {
@@ -3231,6 +3260,10 @@ $intensity: 25%;
             height: 192px;
         }
     }
+    .clutch-widget {
+        margin-top: 30px;
+        width: 200px;
+    }
     .footer {
         &__wrapper {
             flex-direction: column;
@@ -3245,6 +3278,10 @@ $intensity: 25%;
             margin: auto;
             padding-right: 20px;
             padding-bottom: 55px;
+            flex-direction: column;
+        }
+        &__social-media {
+            align-self: center;
         }
     }
 }
