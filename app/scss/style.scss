@@ -123,6 +123,28 @@ html, body {
     height: 100%;
 }
 
+.artshop {
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    width: 50px;
+}
+
+.artshop-in-menu {
+    width: 200px;
+}
+@media (max-width: 1150px)  {
+    .artshop {
+        width: 40px;
+    }
+}
+@media (max-width: 520px)  {
+    .artshop {
+        right: 80px;
+
+    }
+}
+
 header, section, footer {
     overflow: hidden;
 }
@@ -2806,7 +2828,7 @@ $intensity: 25%;
             &-logo {
                 max-width: 190px;
                 margin-left: -5px;
-                margin-top: 30px;
+                margin-top: 24px;
             }
 
             &-h1 {
